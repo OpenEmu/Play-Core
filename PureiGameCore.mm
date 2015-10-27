@@ -150,6 +150,11 @@ public:
     return 44100; // TODO: is this right?
 }
 
+- (NSUInteger)audioBufferSizeForBuffer:(NSUInteger)buffer
+{
+    return 2*[super audioBufferSizeForBuffer:buffer];
+}
+
 @end
 
 #pragma mark - Graphics callbacks
