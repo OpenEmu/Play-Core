@@ -16,6 +16,7 @@
 #import "StdStream.h"
 
 #import <OpenEmuBase/OERingBuffer.h>
+#import <OpenEmuBase/OETimingUtils.h>
 
 static __weak PureiGameCore *_current;
 
@@ -43,10 +44,13 @@ public:
 
 @implementation PureiGameCore
 {
+    @public
     // ivars
     CPS2VM _ps2VM;
-
     NSString *_romPath;
+
+    dispatch_semaphore_t _waitToStartFrameSemaphore;
+    dispatch_semaphore_t _waitToEndFrameSemaphore;
 }
 
 - (void)dealloc
@@ -64,15 +68,14 @@ public:
 {
     _current = self;
 
+    _waitToStartFrameSemaphore = dispatch_semaphore_create(0);
+    _waitToEndFrameSemaphore = dispatch_semaphore_create(0);
     _ps2VM.Initialize();
-    _ps2VM.Pause();
-    _ps2VM.Reset();
 
     CAppConfig::GetInstance().SetPreferenceString(PS2VM_CDROM0PATH, [_romPath fileSystemRepresentation]);
-    CAppConfig::GetInstance().SetPreferenceInteger(PREF_CGSHANDLER_PRESENTATION_MODE, CGSHandler::PRESENTATION_MODE_ORIGINAL);
+    CAppConfig::GetInstance().SetPreferenceInteger(PREF_CGSHANDLER_PRESENTATION_MODE, CGSHandler::PRESENTATION_MODE_FIT);
 
     // TODO: In Debug disable dynarec?
-    // TODO: Disable logging (it's huge)
     // TODO: TODO: Set mc0, mc1 directories to save dir. Set host directory to BIOS dir?
 }
 
@@ -82,6 +85,7 @@ public:
 
 - (void)startEmulation
 {
+    dispatch_semaphore_signal(_waitToStartFrameSemaphore);
     [self.renderDelegate willRenderOnAlternateThread];
 
     _ps2VM.CreateGSHandler(CGSH_OpenEmu::GetFactoryFunction());
@@ -91,7 +95,7 @@ public:
     CGSHandler::PRESENTATION_PARAMS presentationParams;
     auto presentationMode = static_cast<CGSHandler::PRESENTATION_MODE>(CAppConfig::GetInstance().GetPreferenceInteger(PREF_CGSHANDLER_PRESENTATION_MODE));
     presentationParams.windowWidth = 640;
-    presentationParams.windowHeight = 448;
+    presentationParams.windowHeight = 480;
     presentationParams.mode = presentationMode;
     _ps2VM.m_ee->m_gs->SetPresentationParams(presentationParams);
 
@@ -106,7 +110,9 @@ public:
 
 - (void)executeFrame
 {
-    // Do nothing.
+    dispatch_semaphore_signal(_waitToStartFrameSemaphore);
+    // TODO: maybe need to wait
+    dispatch_semaphore_wait(_waitToEndFrameSemaphore, DISPATCH_TIME_FOREVER);
 }
 
 - (void)stopEmulation
@@ -119,11 +125,14 @@ public:
     return OEGameCoreRenderingOpenGL2Video;
 }
 
-// TODO: frameInterval
+- (NSTimeInterval)frameInterval
+{
+    return 60 / 1.001f;
+}
 
 - (OEIntSize)bufferSize
 {
-    return OEIntSizeMake(640, 448);
+    return OEIntSizeMake(640, 480);
 }
 
 - (OEIntSize)aspectSize
@@ -147,6 +156,8 @@ public:
 
 static CGSHandler *GSHandlerFactory()
 {
+    OESetThreadRealtime(1. / (1 * 60), .007, .03); // guessed from bsnes
+
     return new CGSH_OpenEmu();
 }
 
@@ -159,19 +170,28 @@ void CGSH_OpenEmu::InitializeImpl()
 {
     GET_CURRENT_OR_RETURN();
 
+    OESetThreadRealtime(1. / (1 * 60), .007, .03); // guessed from bsnes
+
     [current.renderDelegate willRenderFrameOnAlternateThread];
     CGSH_OpenGL::InitializeImpl();
+
+    this->m_presentFramebuffer = [current.renderDelegate.presentationFramebuffer intValue];
+
+    glClearColor(0,0,0,0);
+    glClear(GL_COLOR_BUFFER_BIT);
 }
 
 void CGSH_OpenEmu::PresentBackbuffer()
 {
     GET_CURRENT_OR_RETURN();
 
-    // TODO: Play's GL code uses framebuffers, which means it doesn't work with us.
-    // We need to replace the code, or fetch their framebuffer and blit it to ours.
-    // TODO #2: Play's GL code doesn't alloc a framebuffer ID and just assumes it can use FBO #0 :(
-
+    // TODO: The core depends on vsync for timing here. (like Mupen)
+    // We don't have vsync, so without this wait hack it runs as fast as possible.
+    // Need more precise timing.
+    dispatch_semaphore_wait(current->_waitToStartFrameSemaphore, DISPATCH_TIME_FOREVER);
     [current.renderDelegate didRenderFrameOnAlternateThread];
+
+    dispatch_semaphore_signal(current->_waitToEndFrameSemaphore);
 }
 
 // TODO: Implement pad handler/input
@@ -191,10 +211,13 @@ void CSH_OpenEmu::RecycleBuffers()
 
 }
 
-void CSH_OpenEmu::Write(int16 *audio, unsigned int samples, unsigned int sampleRate)
+void CSH_OpenEmu::Write(int16 *audio, unsigned int sampleCount, unsigned int sampleRate)
 {
     GET_CURRENT_OR_RETURN();
-    [[current ringBufferAtIndex:0] write:audio maxLength:samples];
+
+    OERingBuffer *rb = [current ringBufferAtIndex:0];
+    
+    [rb write:audio maxLength:sampleCount*2];
 }
 
 static CSoundHandler *SoundHandlerFactory()
