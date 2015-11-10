@@ -48,9 +48,6 @@ public:
     // ivars
     CPS2VM _ps2VM;
     NSString *_romPath;
-
-    dispatch_semaphore_t _waitToStartFrameSemaphore;
-    dispatch_semaphore_t _waitToEndFrameSemaphore;
 }
 
 - (void)dealloc
@@ -68,8 +65,6 @@ public:
 {
     _current = self;
 
-    _waitToStartFrameSemaphore = dispatch_semaphore_create(0);
-    _waitToEndFrameSemaphore = dispatch_semaphore_create(0);
     _ps2VM.Initialize();
 
     CAppConfig::GetInstance().SetPreferenceString(PS2VM_CDROM0PATH, [_romPath fileSystemRepresentation]);
@@ -85,9 +80,6 @@ public:
 
 - (void)startEmulation
 {
-    dispatch_semaphore_signal(_waitToStartFrameSemaphore);
-    [self.renderDelegate willRenderOnAlternateThread];
-
     _ps2VM.CreateGSHandler(CGSH_OpenEmu::GetFactoryFunction());
 //    _ps2VM.CreatePadHandler(NULL);
     _ps2VM.CreateSoundHandler(CSH_OpenEmu::GetFactoryFunction());
@@ -110,9 +102,7 @@ public:
 
 - (void)executeFrame
 {
-    dispatch_semaphore_signal(_waitToStartFrameSemaphore);
-    // TODO: maybe need to wait
-    dispatch_semaphore_wait(_waitToEndFrameSemaphore, DISPATCH_TIME_FOREVER);
+    // Do nothing.
 }
 
 - (void)stopEmulation
@@ -127,7 +117,7 @@ public:
 
 - (NSTimeInterval)frameInterval
 {
-    return 60 / 1.001f;
+    return 60;
 }
 
 - (OEIntSize)bufferSize
@@ -138,6 +128,11 @@ public:
 - (OEIntSize)aspectSize
 {
     return OEIntSizeMake(4,3);
+}
+
+- (BOOL)hasAlternateRenderingThread
+{
+    return YES;
 }
 
 - (NSUInteger)channelCount
@@ -161,8 +156,6 @@ public:
 
 static CGSHandler *GSHandlerFactory()
 {
-    OESetThreadRealtime(1. / (1 * 60), .007, .03); // guessed from bsnes
-
     return new CGSH_OpenEmu();
 }
 
@@ -174,8 +167,6 @@ CGSHandler::FactoryFunction CGSH_OpenEmu::GetFactoryFunction()
 void CGSH_OpenEmu::InitializeImpl()
 {
     GET_CURRENT_OR_RETURN();
-
-    OESetThreadRealtime(1. / (1 * 60), .007, .03); // guessed from bsnes
 
     [current.renderDelegate willRenderFrameOnAlternateThread];
     CGSH_OpenGL::InitializeImpl();
@@ -190,13 +181,10 @@ void CGSH_OpenEmu::PresentBackbuffer()
 {
     GET_CURRENT_OR_RETURN();
 
-    // TODO: The core depends on vsync for timing here. (like Mupen)
-    // We don't have vsync, so without this wait hack it runs as fast as possible.
-    // Need more precise timing.
-    dispatch_semaphore_wait(current->_waitToStartFrameSemaphore, DISPATCH_TIME_FOREVER);
     [current.renderDelegate didRenderFrameOnAlternateThread];
 
-    dispatch_semaphore_signal(current->_waitToEndFrameSemaphore);
+    // Start the next one.
+    [current.renderDelegate willRenderFrameOnAlternateThread];
 }
 
 // TODO: Implement pad handler/input
@@ -221,12 +209,12 @@ void CSH_OpenEmu::Write(int16 *audio, unsigned int sampleCount, unsigned int sam
     GET_CURRENT_OR_RETURN();
 
     OERingBuffer *rb = [current ringBufferAtIndex:0];
-    
     [rb write:audio maxLength:sampleCount*2];
 }
 
 static CSoundHandler *SoundHandlerFactory()
 {
+    OESetThreadRealtime(1. / (1 * 60), .007, .03);
     return new CSH_OpenEmu();
 }
 
