@@ -105,11 +105,6 @@ public:
     // Do nothing.
 }
 
-- (void)stopEmulation
-{
-    _ps2VM.Pause();
-}
-
 - (OEGameCoreRendering)gameCoreRendering
 {
     return OEGameCoreRenderingOpenGL2Video;
