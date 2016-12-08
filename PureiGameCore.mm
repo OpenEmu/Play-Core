@@ -42,12 +42,73 @@ public:
     static FactoryFunction	GetFactoryFunction();
 };
 
+class CPH_OpenEmu : public CPadHandler
+{
+public:
+    CPH_OpenEmu();
+    virtual                 ~CPH_OpenEmu() {};
+    void                    Update(uint8*);
+    
+    static FactoryFunction	GetFactoryFunction();
+};
+
+class CBinding
+{
+public:
+    virtual			~CBinding() {}
+    
+    virtual void	ProcessEvent(OEPS2Button, uint32) = 0;
+    
+    virtual uint32	GetValue() const = 0;
+};
+
+typedef std::shared_ptr<CBinding> BindingPtr;
+
+class CSimpleBinding : public CBinding
+{
+public:
+    CSimpleBinding(OEPS2Button);
+    virtual         ~CSimpleBinding();
+    
+    virtual void    ProcessEvent(OEPS2Button, uint32);
+    
+    virtual uint32  GetValue() const;
+    
+private:
+    OEPS2Button     m_keyCode;
+    uint32          m_state;
+};
+
+class CSimulatedAxisBinding : public CBinding
+{
+public:
+    CSimulatedAxisBinding(OEPS2Button, OEPS2Button);
+    virtual         ~CSimulatedAxisBinding();
+    
+    virtual void    ProcessEvent(OEPS2Button, uint32);
+    
+    virtual uint32  GetValue() const;
+    
+private:
+    OEPS2Button     m_negativeKeyCode;
+    OEPS2Button     m_positiveKeyCode;
+    
+    uint32          m_negativeState;
+    uint32          m_positiveState;
+};
+
+
+@interface PureiGameCore() <OEPS2SystemResponderClient>
+
+@end
+
 @implementation PureiGameCore
 {
     @public
     // ivars
     CPS2VM _ps2VM;
     NSString *_romPath;
+    BindingPtr _bindings[PS2::CControllerInfo::MAX_BUTTONS];
 }
 
 - (void)dealloc
@@ -70,6 +131,28 @@ public:
     CAppConfig::GetInstance().SetPreferenceString(PS2VM_CDROM0PATH, [_romPath fileSystemRepresentation]);
     CAppConfig::GetInstance().SetPreferenceInteger(PREF_CGSHANDLER_PRESENTATION_MODE, CGSHandler::PRESENTATION_MODE_FIT);
 
+    _bindings[PS2::CControllerInfo::START] = std::make_shared<CSimpleBinding>(OEPS2ButtonStart);
+    _bindings[PS2::CControllerInfo::SELECT] = std::make_shared<CSimpleBinding>(OEPS2ButtonSelect);
+    _bindings[PS2::CControllerInfo::DPAD_LEFT] = std::make_shared<CSimpleBinding>(OEPS2ButtonLeft);
+    _bindings[PS2::CControllerInfo::DPAD_RIGHT] = std::make_shared<CSimpleBinding>(OEPS2ButtonRight);
+    _bindings[PS2::CControllerInfo::DPAD_UP] = std::make_shared<CSimpleBinding>(OEPS2ButtonUp);
+    _bindings[PS2::CControllerInfo::DPAD_DOWN] = std::make_shared<CSimpleBinding>(OEPS2ButtonDown);
+    _bindings[PS2::CControllerInfo::SQUARE] = std::make_shared<CSimpleBinding>(OEPS2ButtonSquare);
+    _bindings[PS2::CControllerInfo::CROSS] = std::make_shared<CSimpleBinding>(OEPS2ButtonCross);
+    _bindings[PS2::CControllerInfo::TRIANGLE] = std::make_shared<CSimpleBinding>(OEPS2ButtonTriangle);
+    _bindings[PS2::CControllerInfo::CIRCLE] = std::make_shared<CSimpleBinding>(OEPS2ButtonCircle);
+    _bindings[PS2::CControllerInfo::L1] = std::make_shared<CSimpleBinding>(OEPS2ButtonL1);
+    _bindings[PS2::CControllerInfo::L2] = std::make_shared<CSimpleBinding>(OEPS2ButtonL2);
+    _bindings[PS2::CControllerInfo::L3] = std::make_shared<CSimpleBinding>(OEPS2ButtonL3);
+    _bindings[PS2::CControllerInfo::R1] = std::make_shared<CSimpleBinding>(OEPS2ButtonR1);
+    _bindings[PS2::CControllerInfo::R2] = std::make_shared<CSimpleBinding>(OEPS2ButtonR2);
+    _bindings[PS2::CControllerInfo::R3] = std::make_shared<CSimpleBinding>(OEPS2ButtonR3);
+    _bindings[PS2::CControllerInfo::R3] = std::make_shared<CSimpleBinding>(OEPS2ButtonR3);
+    _bindings[PS2::CControllerInfo::ANALOG_LEFT_X] = std::make_shared<CSimulatedAxisBinding>(OEPS2LeftAnalogUp,OEPS2LeftAnalogDown);
+    _bindings[PS2::CControllerInfo::ANALOG_LEFT_Y] = std::make_shared<CSimulatedAxisBinding>(OEPS2LeftAnalogLeft,OEPS2LeftAnalogRight);
+    _bindings[PS2::CControllerInfo::ANALOG_RIGHT_X] = std::make_shared<CSimulatedAxisBinding>(OEPS2RightAnalogUp,OEPS2RightAnalogDown);
+    _bindings[PS2::CControllerInfo::ANALOG_RIGHT_Y] = std::make_shared<CSimulatedAxisBinding>(OEPS2RightAnalogLeft,OEPS2RightAnalogRight);
+
     // TODO: In Debug disable dynarec?
     // TODO: TODO: Set mc0, mc1 directories to save dir. Set host directory to BIOS dir?
 }
@@ -81,7 +164,7 @@ public:
 - (void)startEmulation
 {
     _ps2VM.CreateGSHandler(CGSH_OpenEmu::GetFactoryFunction());
-//    _ps2VM.CreatePadHandler(NULL);
+    _ps2VM.CreatePadHandler(CPH_OpenEmu::GetFactoryFunction());
     _ps2VM.CreateSoundHandler(CSH_OpenEmu::GetFactoryFunction());
 
     CGSHandler::PRESENTATION_PARAMS presentationParams;
@@ -145,6 +228,41 @@ public:
     return 2*[super audioBufferSizeForBuffer:buffer];
 }
 
+- (oneway void)didMovePS2JoystickDirection:(OEPS2Button)button withValue:(CGFloat)value forPlayer:(NSUInteger)player
+{
+    //TODO: find real scale value
+    uint32 val = value * 255;
+    for(auto bindingIterator(std::begin(_bindings));
+        bindingIterator != std::end(_bindings); bindingIterator++)
+    {
+        const auto& binding = (*bindingIterator);
+        if(!binding) continue;
+        binding->ProcessEvent(button, val);
+    }
+}
+
+- (oneway void)didPushPS2Button:(OEPS2Button)button forPlayer:(NSUInteger)player
+{
+    for(auto bindingIterator(std::begin(_bindings));
+        bindingIterator != std::end(_bindings); bindingIterator++)
+    {
+        const auto& binding = (*bindingIterator);
+        if(!binding) continue;
+        binding->ProcessEvent(button, 1);
+    }
+}
+
+- (oneway void)didReleasePS2Button:(OEPS2Button)button forPlayer:(NSUInteger)player
+{
+    for(auto bindingIterator(std::begin(_bindings));
+        bindingIterator != std::end(_bindings); bindingIterator++)
+    {
+        const auto& binding = (*bindingIterator);
+        if(!binding) continue;
+        binding->ProcessEvent(button, 0);
+    }
+}
+
 @end
 
 #pragma mark - Graphics callbacks
@@ -182,8 +300,6 @@ void CGSH_OpenEmu::PresentBackbuffer()
     [current.renderDelegate willRenderFrameOnAlternateThread];
 }
 
-// TODO: Implement pad handler/input
-
 void CSH_OpenEmu::Reset()
 {
 
@@ -216,4 +332,111 @@ static CSoundHandler *SoundHandlerFactory()
 CSoundHandler::FactoryFunction CSH_OpenEmu::GetFactoryFunction()
 {
     return SoundHandlerFactory;
+}
+
+void CPH_OpenEmu::Update(uint8* ram)
+{
+	GET_CURRENT_OR_RETURN();
+    
+    for(auto listenerIterator(std::begin(m_listeners));
+        listenerIterator != std::end(m_listeners); listenerIterator++)
+    {
+        auto* listener(*listenerIterator);
+        
+        for(unsigned int i = 0; i < PS2::CControllerInfo::MAX_BUTTONS; i++)
+        {
+            const auto& binding = current->_bindings[i];
+            if(!binding) continue;
+            uint32 value = binding->GetValue();
+            auto currentButtonId = static_cast<PS2::CControllerInfo::BUTTON>(i);
+            if(PS2::CControllerInfo::IsAxis(currentButtonId))
+            {
+                listener->SetAxisState(0, currentButtonId, value & 0xFF, ram);
+            }
+            else
+            {
+                listener->SetButtonState(0, currentButtonId, value != 0, ram);
+            }
+        }
+    }
+
+}
+
+static CPadHandler *PadHandlerFactory()
+{
+    return new CPH_OpenEmu();
+}
+
+CPadHandler::FactoryFunction CPH_OpenEmu::GetFactoryFunction()
+{
+    return PadHandlerFactory;
+}
+
+//---------------------------------------------------------------------------------
+
+CSimpleBinding::CSimpleBinding(OEPS2Button keyCode)
+: m_keyCode(keyCode)
+, m_state(0)
+{
+	
+}
+
+CSimpleBinding::~CSimpleBinding()
+{
+	
+}
+
+void CSimpleBinding::ProcessEvent(OEPS2Button keyCode, uint32 state)
+{
+    if(keyCode != m_keyCode) return;
+    m_state = state;
+}
+
+uint32 CSimpleBinding::GetValue() const
+{
+    return m_state;
+}
+
+//---------------------------------------------------------------------------------
+CSimulatedAxisBinding::CSimulatedAxisBinding(OEPS2Button negativeKeyCode, OEPS2Button positiveKeyCode)
+: m_negativeKeyCode(negativeKeyCode)
+, m_positiveKeyCode(positiveKeyCode)
+, m_negativeState(0)
+, m_positiveState(0)
+{
+    
+}
+
+CSimulatedAxisBinding::~CSimulatedAxisBinding()
+{
+    
+}
+
+void CSimulatedAxisBinding::ProcessEvent(OEPS2Button keyCode, uint32 state)
+{
+    if(keyCode == m_negativeKeyCode)
+    {
+        m_negativeState = state;
+    }
+    
+    if(keyCode == m_positiveKeyCode)
+    {
+        m_positiveState = state;
+    }
+}
+
+uint32 CSimulatedAxisBinding::GetValue() const
+{
+    uint32 value = 0x7F;
+    
+    if(m_negativeState)
+    {
+        value -= 0x7F;
+    }
+    if(m_positiveState)
+    {
+        value += 0x7F;
+    }
+    
+    return value;
 }
