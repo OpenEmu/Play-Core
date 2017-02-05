@@ -148,7 +148,6 @@
 		3DC5FC681BDB7811005DA404 /* Iop_FileIo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5FA751BDB7811005DA404 /* Iop_FileIo.cpp */; };
 		3DC5FC691BDB7811005DA404 /* Iop_FileIoHandler1000.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5FA771BDB7811005DA404 /* Iop_FileIoHandler1000.cpp */; };
 		3DC5FC6A1BDB7811005DA404 /* Iop_FileIoHandler2100.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5FA791BDB7811005DA404 /* Iop_FileIoHandler2100.cpp */; };
-		3DC5FC6B1BDB7811005DA404 /* Iop_FileIoHandler2300.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5FA7B1BDB7811005DA404 /* Iop_FileIoHandler2300.cpp */; };
 		3DC5FC6C1BDB7811005DA404 /* Iop_Intc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5FA7D1BDB7811005DA404 /* Iop_Intc.cpp */; };
 		3DC5FC6D1BDB7811005DA404 /* Iop_Intrman.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5FA7F1BDB7811005DA404 /* Iop_Intrman.cpp */; };
 		3DC5FC6E1BDB7811005DA404 /* Iop_Ioman.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5FA811BDB7811005DA404 /* Iop_Ioman.cpp */; };
@@ -239,6 +238,11 @@
 		3DC5FD8C1BDB7FB1005DA404 /* X86Assembler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5FD721BDB7FB1005DA404 /* X86Assembler.cpp */; };
 		3DC5FD8D1BDB7FB1005DA404 /* X86Assembler_Fpu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5FD731BDB7FB1005DA404 /* X86Assembler_Fpu.cpp */; };
 		3DC5FD8E1BDB7FB1005DA404 /* X86Assembler_Sse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5FD741BDB7FB1005DA404 /* X86Assembler_Sse.cpp */; };
+		557239241E47026000AF40D3 /* Iop_FileIoHandler2240.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 557239221E47025800AF40D3 /* Iop_FileIoHandler2240.cpp */; };
+		557239271E47067B00AF40D3 /* Iop_MtapMan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 557239251E47067B00AF40D3 /* Iop_MtapMan.cpp */; };
+		5572392A1E47075000AF40D3 /* Iop_Module.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 557239281E47075000AF40D3 /* Iop_Module.cpp */; };
+		5572392D1E47083000AF40D3 /* Iop_Heaplib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5572392B1E47083000AF40D3 /* Iop_Heaplib.cpp */; };
+		557239301E47091F00AF40D3 /* Iop_Thvpool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5572392E1E47091F00AF40D3 /* Iop_Thvpool.cpp */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -478,8 +482,6 @@
 		3DC5FA781BDB7811005DA404 /* Iop_FileIoHandler1000.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Iop_FileIoHandler1000.h; sourceTree = "<group>"; };
 		3DC5FA791BDB7811005DA404 /* Iop_FileIoHandler2100.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Iop_FileIoHandler2100.cpp; sourceTree = "<group>"; };
 		3DC5FA7A1BDB7811005DA404 /* Iop_FileIoHandler2100.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Iop_FileIoHandler2100.h; sourceTree = "<group>"; };
-		3DC5FA7B1BDB7811005DA404 /* Iop_FileIoHandler2300.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Iop_FileIoHandler2300.cpp; sourceTree = "<group>"; };
-		3DC5FA7C1BDB7811005DA404 /* Iop_FileIoHandler2300.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Iop_FileIoHandler2300.h; sourceTree = "<group>"; };
 		3DC5FA7D1BDB7811005DA404 /* Iop_Intc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Iop_Intc.cpp; sourceTree = "<group>"; };
 		3DC5FA7E1BDB7811005DA404 /* Iop_Intc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Iop_Intc.h; sourceTree = "<group>"; };
 		3DC5FA7F1BDB7811005DA404 /* Iop_Intrman.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Iop_Intrman.cpp; sourceTree = "<group>"; };
@@ -777,6 +779,16 @@
 		3DC5FEFD1BDB7FF6005DA404 /* ZipInflateStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipInflateStream.h; sourceTree = "<group>"; };
 		3DC5FEFE1BDB7FF6005DA404 /* ZipStoreStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipStoreStream.h; sourceTree = "<group>"; };
 		3DE1F1921BDE1BB00061A39E /* SoundHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoundHandler.h; path = Play/tools/PsfPlayer/Source/SoundHandler.h; sourceTree = "<group>"; };
+		557239221E47025800AF40D3 /* Iop_FileIoHandler2240.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Iop_FileIoHandler2240.cpp; sourceTree = "<group>"; };
+		557239231E47025800AF40D3 /* Iop_FileIoHandler2240.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Iop_FileIoHandler2240.h; sourceTree = "<group>"; };
+		557239251E47067B00AF40D3 /* Iop_MtapMan.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Iop_MtapMan.cpp; sourceTree = "<group>"; };
+		557239261E47067B00AF40D3 /* Iop_MtapMan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Iop_MtapMan.h; sourceTree = "<group>"; };
+		557239281E47075000AF40D3 /* Iop_Module.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Iop_Module.cpp; sourceTree = "<group>"; };
+		557239291E47075000AF40D3 /* Iop_Module.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Iop_Module.h; sourceTree = "<group>"; };
+		5572392B1E47083000AF40D3 /* Iop_Heaplib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Iop_Heaplib.cpp; sourceTree = "<group>"; };
+		5572392C1E47083000AF40D3 /* Iop_Heaplib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Iop_Heaplib.h; sourceTree = "<group>"; };
+		5572392E1E47091F00AF40D3 /* Iop_Thvpool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Iop_Thvpool.cpp; sourceTree = "<group>"; };
+		5572392F1E47091F00AF40D3 /* Iop_Thvpool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Iop_Thvpool.h; sourceTree = "<group>"; };
 		8D5B49B6048680CD000E48DA /* Play!.oecoreplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Play!.oecoreplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		942597D0151470840074E3A3 /* OpenEmuBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenEmuBase.framework; path = ../OpenEmu/build/Release/OpenEmuBase.framework; sourceTree = "<group>"; };
@@ -1260,6 +1272,8 @@
 		3DC5FA641BDB7811005DA404 /* iop */ = {
 			isa = PBXGroup;
 			children = (
+				5572392E1E47091F00AF40D3 /* Iop_Thvpool.cpp */,
+				5572392F1E47091F00AF40D3 /* Iop_Thvpool.h */,
 				3DC5FA651BDB7811005DA404 /* ArgumentIterator.cpp */,
 				3DC5FA661BDB7811005DA404 /* ArgumentIterator.h */,
 				3DC5FA671BDB7811005DA404 /* DirectoryDevice.cpp */,
@@ -1278,12 +1292,16 @@
 				3DC5FA741BDB7811005DA404 /* Iop_Dynamic.h */,
 				3DC5FA751BDB7811005DA404 /* Iop_FileIo.cpp */,
 				3DC5FA761BDB7811005DA404 /* Iop_FileIo.h */,
+				5572392B1E47083000AF40D3 /* Iop_Heaplib.cpp */,
+				5572392C1E47083000AF40D3 /* Iop_Heaplib.h */,
+				557239281E47075000AF40D3 /* Iop_Module.cpp */,
+				557239291E47075000AF40D3 /* Iop_Module.h */,
 				3DC5FA771BDB7811005DA404 /* Iop_FileIoHandler1000.cpp */,
 				3DC5FA781BDB7811005DA404 /* Iop_FileIoHandler1000.h */,
 				3DC5FA791BDB7811005DA404 /* Iop_FileIoHandler2100.cpp */,
 				3DC5FA7A1BDB7811005DA404 /* Iop_FileIoHandler2100.h */,
-				3DC5FA7B1BDB7811005DA404 /* Iop_FileIoHandler2300.cpp */,
-				3DC5FA7C1BDB7811005DA404 /* Iop_FileIoHandler2300.h */,
+				557239221E47025800AF40D3 /* Iop_FileIoHandler2240.cpp */,
+				557239231E47025800AF40D3 /* Iop_FileIoHandler2240.h */,
 				3DC5FA7D1BDB7811005DA404 /* Iop_Intc.cpp */,
 				3DC5FA7E1BDB7811005DA404 /* Iop_Intc.h */,
 				3DC5FA7F1BDB7811005DA404 /* Iop_Intrman.cpp */,
@@ -1299,6 +1317,8 @@
 				3DC5FA891BDB7811005DA404 /* Iop_Modload.cpp */,
 				3DC5FA8A1BDB7811005DA404 /* Iop_Modload.h */,
 				3DC5FA8B1BDB7811005DA404 /* Iop_Module.h */,
+				557239251E47067B00AF40D3 /* Iop_MtapMan.cpp */,
+				557239261E47067B00AF40D3 /* Iop_MtapMan.h */,
 				3DC5FA8C1BDB7811005DA404 /* Iop_PadMan.cpp */,
 				3DC5FA8D1BDB7811005DA404 /* Iop_PadMan.h */,
 				3DC5FA8E1BDB7811005DA404 /* Iop_RootCounters.cpp */,
@@ -1317,10 +1337,10 @@
 				3DC5FA9B1BDB7811005DA404 /* Iop_Sio2.h */,
 				3DC5FA9C1BDB7811005DA404 /* Iop_Spu.cpp */,
 				3DC5FA9D1BDB7811005DA404 /* Iop_Spu.h */,
-				3DC5FA9E1BDB7811005DA404 /* Iop_Spu2.cpp */,
-				3DC5FA9F1BDB7811005DA404 /* Iop_Spu2.h */,
 				3DC5FAA01BDB7811005DA404 /* Iop_Spu2_Core.cpp */,
 				3DC5FAA11BDB7811005DA404 /* Iop_Spu2_Core.h */,
+				3DC5FA9E1BDB7811005DA404 /* Iop_Spu2.cpp */,
+				3DC5FA9F1BDB7811005DA404 /* Iop_Spu2.h */,
 				3DC5FAA21BDB7811005DA404 /* Iop_SpuBase.cpp */,
 				3DC5FAA31BDB7811005DA404 /* Iop_SpuBase.h */,
 				3DC5FAA41BDB7811005DA404 /* Iop_Stdio.cpp */,
@@ -1871,6 +1891,7 @@
 				3DC5FCA61BDB7811005DA404 /* PadListener.cpp in Sources */,
 				3DC5FC681BDB7811005DA404 /* Iop_FileIo.cpp in Sources */,
 				3DC5FC731BDB7811005DA404 /* Iop_PadMan.cpp in Sources */,
+				5572392A1E47075000AF40D3 /* Iop_Module.cpp in Sources */,
 				3DC5FC421BDB7811005DA404 /* IPU_MacroblockTypeITable.cpp in Sources */,
 				3DC5FC6E1BDB7811005DA404 /* Iop_Ioman.cpp in Sources */,
 				3DC5FCA41BDB7811005DA404 /* MIPSTags.cpp in Sources */,
@@ -1884,10 +1905,10 @@
 				3DC5FC341BDB7811005DA404 /* COP_VU_Reflection.cpp in Sources */,
 				3DC5FCA11BDB7811005DA404 /* MIPSInstructionFactory.cpp in Sources */,
 				3DC5FC401BDB7811005DA404 /* IPU_MacroblockAddressIncrementTable.cpp in Sources */,
-				3DC5FC6B1BDB7811005DA404 /* Iop_FileIoHandler2300.cpp in Sources */,
 				3DC5FC9C1BDB7811005DA404 /* MIPSArchitecture.cpp in Sources */,
 				3DC5FC761BDB7811005DA404 /* Iop_SifDynamic.cpp in Sources */,
 				3DC5FC541BDB7811005DA404 /* VuExecutor.cpp in Sources */,
+				557239241E47026000AF40D3 /* Iop_FileIoHandler2240.cpp in Sources */,
 				3DC5FC641BDB7811005DA404 /* Iop_Cdvdman.cpp in Sources */,
 				3DC5FCA21BDB7811005DA404 /* MipsJitter.cpp in Sources */,
 				3DC5FC331BDB7811005DA404 /* COP_VU.cpp in Sources */,
@@ -1900,6 +1921,7 @@
 				3DC5FCA81BDB7811005DA404 /* Profiler.cpp in Sources */,
 				3DC5FC6D1BDB7811005DA404 /* Iop_Intrman.cpp in Sources */,
 				3DC5FC381BDB7811005DA404 /* EEAssembler.cpp in Sources */,
+				557239271E47067B00AF40D3 /* Iop_MtapMan.cpp in Sources */,
 				3DC5FCAC1BDB7811005DA404 /* MaxSaveImporter.cpp in Sources */,
 				3DC5FC4F1BDB7811005DA404 /* Vif.cpp in Sources */,
 				3DC5FC9E1BDB7811005DA404 /* MIPSCoprocessor.cpp in Sources */,
@@ -1936,6 +1958,8 @@
 				3DC5FC4C1BDB7811005DA404 /* PS2OS.cpp in Sources */,
 				3DC5FC351BDB7811005DA404 /* DMAC.cpp in Sources */,
 				3DC5FC461BDB7811005DA404 /* MA_EE_Reflection.cpp in Sources */,
+				557239301E47091F00AF40D3 /* Iop_Thvpool.cpp in Sources */,
+				5572392D1E47083000AF40D3 /* Iop_Heaplib.cpp in Sources */,
 				3DC5FC8F1BDB7811005DA404 /* PathTableRecord.cpp in Sources */,
 				3DC5FCB01BDB7811005DA404 /* SaveImporter.cpp in Sources */,
 				3DC5FC6F1BDB7811005DA404 /* Iop_LibSd.cpp in Sources */,
