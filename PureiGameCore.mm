@@ -45,7 +45,7 @@ public:
 class CPH_OpenEmu : public CPadHandler
 {
 public:
-    CPH_OpenEmu();
+	CPH_OpenEmu() {};
     virtual                 ~CPH_OpenEmu() {};
     void                    Update(uint8*);
     
@@ -175,7 +175,7 @@ private:
     _ps2VM.m_ee->m_gs->SetPresentationParams(presentationParams);
 
     CPS2OS* os = _ps2VM.m_ee->m_os;
-    os->BootFromCDROM(CPS2OS::ArgumentList());
+    os->BootFromCDROM();
 
     // TODO: Play! starts a bunch of threads. They all need to be realtime.
     _ps2VM.Resume();
