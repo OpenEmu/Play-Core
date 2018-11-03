@@ -128,7 +128,7 @@ private:
 
     _ps2VM.Initialize();
 
-    CAppConfig::GetInstance().SetPreferenceString(PS2VM_CDROM0PATH, [_romPath fileSystemRepresentation]);
+    CAppConfig::GetInstance().SetPreferenceString(PREF_PS2_CDROM0_PATH, [_romPath fileSystemRepresentation]);
     CAppConfig::GetInstance().SetPreferenceInteger(PREF_CGSHANDLER_PRESENTATION_MODE, CGSHandler::PRESENTATION_MODE_FIT);
 
     _bindings[PS2::CControllerInfo::START] = std::make_shared<CSimpleBinding>(OEPS2ButtonStart);
