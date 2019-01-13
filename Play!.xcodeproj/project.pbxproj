@@ -254,6 +254,7 @@
 		5553B7DE1EEC69FF003F89B5 /* MachoObjectFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5553B7DD1EEC69FF003F89B5 /* MachoObjectFile.cpp */; };
 		5553B7E41EEC6A54003F89B5 /* CoffObjectFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5553B7E31EEC6A54003F89B5 /* CoffObjectFile.cpp */; };
 		5553B7E61EEC6A72003F89B5 /* ObjectFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5553B7E51EEC6A72003F89B5 /* ObjectFile.cpp */; };
+		555DFAAB21EBBBC6001D24BC /* FpUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 555DFAA921EBBBC5001D24BC /* FpUtils.cpp */; };
 		557239241E47026000AF40D3 /* Iop_FileIoHandler2240.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 557239221E47025800AF40D3 /* Iop_FileIoHandler2240.cpp */; };
 		557239271E47067B00AF40D3 /* Iop_MtapMan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 557239251E47067B00AF40D3 /* Iop_MtapMan.cpp */; };
 		5572392A1E47075000AF40D3 /* Iop_Module.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 557239281E47075000AF40D3 /* Iop_Module.cpp */; };
@@ -832,6 +833,8 @@
 		5553B7E21EEC6A43003F89B5 /* CoffObjectFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoffObjectFile.h; sourceTree = "<group>"; };
 		5553B7E31EEC6A54003F89B5 /* CoffObjectFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CoffObjectFile.cpp; sourceTree = "<group>"; };
 		5553B7E51EEC6A72003F89B5 /* ObjectFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ObjectFile.cpp; sourceTree = "<group>"; };
+		555DFAA921EBBBC5001D24BC /* FpUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FpUtils.cpp; sourceTree = "<group>"; };
+		555DFAAA21EBBBC6001D24BC /* FpUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FpUtils.h; sourceTree = "<group>"; };
 		557239221E47025800AF40D3 /* Iop_FileIoHandler2240.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Iop_FileIoHandler2240.cpp; sourceTree = "<group>"; };
 		557239231E47025800AF40D3 /* Iop_FileIoHandler2240.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Iop_FileIoHandler2240.h; sourceTree = "<group>"; };
 		557239251E47067B00AF40D3 /* Iop_MtapMan.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Iop_MtapMan.cpp; sourceTree = "<group>"; };
@@ -1139,6 +1142,8 @@
 				3DC5FA011BDB7811005DA404 /* ControllerInfo.cpp */,
 				3DC5FA021BDB7811005DA404 /* ControllerInfo.h */,
 				3DC5FA051BDB7811005DA404 /* COP_FPU_Reflection.cpp */,
+				555DFAA921EBBBC5001D24BC /* FpUtils.cpp */,
+				555DFAAA21EBBBC6001D24BC /* FpUtils.h */,
 				3DC5FA031BDB7811005DA404 /* COP_FPU.cpp */,
 				3DC5FA041BDB7811005DA404 /* COP_FPU.h */,
 				3DC5FA081BDB7811005DA404 /* COP_SCU_Reflection.cpp */,
@@ -2076,6 +2081,7 @@
 				3DC5FC391BDB7811005DA404 /* EeExecutor.cpp in Sources */,
 				3DC5FC991BDB7811005DA404 /* MemoryUtils.cpp in Sources */,
 				3DC5FC301BDB7811005DA404 /* COP_SCU_Reflection.cpp in Sources */,
+				555DFAAB21EBBBC6001D24BC /* FpUtils.cpp in Sources */,
 				3DC5FCA01BDB7811005DA404 /* MipsFunctionPatternDb.cpp in Sources */,
 				3DC5FC911BDB7811005DA404 /* IszImageStream.cpp in Sources */,
 				3DC5FCB31BDB7811005DA404 /* StructCollectionStateFile.cpp in Sources */,
