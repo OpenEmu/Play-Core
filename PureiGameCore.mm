@@ -190,7 +190,7 @@ private:
 
 - (OEGameCoreRendering)gameCoreRendering
 {
-    return OEGameCoreRenderingOpenGL2Video;
+    return OEGameCoreRenderingOpenGL3Video;
 }
 
 - (NSTimeInterval)frameInterval

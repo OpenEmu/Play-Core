@@ -25,7 +25,7 @@
 		3D05019F1BDB911A003E98C5 /* OpenEmuBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942597D0151470840074E3A3 /* OpenEmuBase.framework */; };
 		3D208E981182550400BEAA42 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D208E971182550400BEAA42 /* OpenGL.framework */; };
 		3D208E9E1182551500BEAA42 /* libz.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D208E9D1182551500BEAA42 /* libz.1.tbd */; };
-		3DA64E5A1BDE06E8003DBE72 /* libbz2.1.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA64E591BDE06E8003DBE72 /* libbz2.1.0.tbd */; };
+		3DA64E5A1BDE06E8003DBE72 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA64E591BDE06E8003DBE72 /* libbz2.tbd */; };
 		3DC5F8591BDB6D54005DA404 /* PureiGameCore.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5F8581BDB6D54005DA404 /* PureiGameCore.mm */; };
 		3DC5F85E1BDB6F2E005DA404 /* include in Resources */ = {isa = PBXBuildFile; fileRef = 3DC5F85D1BDB6F2E005DA404 /* include */; };
 		3DC5F9771BDB7783005DA404 /* Base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5F86A1BDB7750005DA404 /* Base64.cpp */; };
@@ -254,6 +254,7 @@
 		5553B7DE1EEC69FF003F89B5 /* MachoObjectFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5553B7DD1EEC69FF003F89B5 /* MachoObjectFile.cpp */; };
 		5553B7E41EEC6A54003F89B5 /* CoffObjectFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5553B7E31EEC6A54003F89B5 /* CoffObjectFile.cpp */; };
 		5553B7E61EEC6A72003F89B5 /* ObjectFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5553B7E51EEC6A72003F89B5 /* ObjectFile.cpp */; };
+		555DFAAB21EBBBC6001D24BC /* FpUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 555DFAA921EBBBC5001D24BC /* FpUtils.cpp */; };
 		557239241E47026000AF40D3 /* Iop_FileIoHandler2240.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 557239221E47025800AF40D3 /* Iop_FileIoHandler2240.cpp */; };
 		557239271E47067B00AF40D3 /* Iop_MtapMan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 557239251E47067B00AF40D3 /* Iop_MtapMan.cpp */; };
 		5572392A1E47075000AF40D3 /* Iop_Module.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 557239281E47075000AF40D3 /* Iop_Module.cpp */; };
@@ -312,13 +313,13 @@
 		3D0501A01BDB91F6003E98C5 /* OEPS2SystemResponderClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OEPS2SystemResponderClient.h; path = "../OpenEmu/PlayStation 2/OEPS2SystemResponderClient.h"; sourceTree = "<group>"; };
 		3D208E971182550400BEAA42 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		3D208E9D1182551500BEAA42 /* libz.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.tbd; path = usr/lib/libz.1.tbd; sourceTree = SDKROOT; };
-		3DA64E591BDE06E8003DBE72 /* libbz2.1.0.tbd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.1.0.tbd; path = usr/lib/libbz2.1.0.tbd; sourceTree = SDKROOT; };
+		3DA64E591BDE06E8003DBE72 /* libbz2.tbd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		3DC5F8451BDA24F6005DA404 /* libFramework.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libFramework.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC5F8561BDA24FE005DA404 /* libPlay.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libPlay.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC5F8571BDB6D54005DA404 /* PureiGameCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureiGameCore.h; sourceTree = "<group>"; };
 		3DC5F8581BDB6D54005DA404 /* PureiGameCore.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PureiGameCore.mm; sourceTree = "<group>"; };
-		3DC5F85B1BDB6F26005DA404 /* libboost_1_57_0.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.objfile"; name = libboost_1_57_0.a; path = extern/lib/libboost_1_57_0.a; sourceTree = "<group>"; };
-		3DC5F85D1BDB6F2E005DA404 /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; name = include; path = extern/include; sourceTree = "<group>"; };
+		3DC5F85B1BDB6F26005DA404 /* libboost_1_57_0.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.objfile"; name = libboost_1_57_0.a; path = lib/libboost_1_57_0.a; sourceTree = "<group>"; };
+		3DC5F85D1BDB6F2E005DA404 /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; path = include; sourceTree = "<group>"; };
 		3DC5F86A1BDB7750005DA404 /* Base64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Base64.cpp; sourceTree = "<group>"; };
 		3DC5F86C1BDB7750005DA404 /* Bitmap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bitmap.cpp; sourceTree = "<group>"; };
 		3DC5F86D1BDB7750005DA404 /* BMP.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BMP.cpp; sourceTree = "<group>"; };
@@ -832,6 +833,8 @@
 		5553B7E21EEC6A43003F89B5 /* CoffObjectFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoffObjectFile.h; sourceTree = "<group>"; };
 		5553B7E31EEC6A54003F89B5 /* CoffObjectFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CoffObjectFile.cpp; sourceTree = "<group>"; };
 		5553B7E51EEC6A72003F89B5 /* ObjectFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ObjectFile.cpp; sourceTree = "<group>"; };
+		555DFAA921EBBBC5001D24BC /* FpUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FpUtils.cpp; sourceTree = "<group>"; };
+		555DFAAA21EBBBC6001D24BC /* FpUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FpUtils.h; sourceTree = "<group>"; };
 		557239221E47025800AF40D3 /* Iop_FileIoHandler2240.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Iop_FileIoHandler2240.cpp; sourceTree = "<group>"; };
 		557239231E47025800AF40D3 /* Iop_FileIoHandler2240.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Iop_FileIoHandler2240.h; sourceTree = "<group>"; };
 		557239251E47067B00AF40D3 /* Iop_MtapMan.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Iop_MtapMan.cpp; sourceTree = "<group>"; };
@@ -869,7 +872,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
-				3DA64E5A1BDE06E8003DBE72 /* libbz2.1.0.tbd in Frameworks */,
+				3DA64E5A1BDE06E8003DBE72 /* libbz2.tbd in Frameworks */,
 				3D208E981182550400BEAA42 /* OpenGL.framework in Frameworks */,
 				3D05019F1BDB911A003E98C5 /* OpenEmuBase.framework in Frameworks */,
 				3D208E9E1182551500BEAA42 /* libz.1.tbd in Frameworks */,
@@ -929,7 +932,7 @@
 		1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3DA64E591BDE06E8003DBE72 /* libbz2.1.0.tbd */,
+				3DA64E591BDE06E8003DBE72 /* libbz2.tbd */,
 				942597D0151470840074E3A3 /* OpenEmuBase.framework */,
 				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
 				3D208E971182550400BEAA42 /* OpenGL.framework */,
@@ -976,7 +979,8 @@
 				3DC5F85B1BDB6F26005DA404 /* libboost_1_57_0.a */,
 			);
 			name = boost;
-			sourceTree = "<group>";
+			path = extern;
+			sourceTree = SOURCE_ROOT;
 		};
 		3DC5F85F1BDB7214005DA404 /* CodeGen */ = {
 			isa = PBXGroup;
@@ -1138,6 +1142,8 @@
 				3DC5FA011BDB7811005DA404 /* ControllerInfo.cpp */,
 				3DC5FA021BDB7811005DA404 /* ControllerInfo.h */,
 				3DC5FA051BDB7811005DA404 /* COP_FPU_Reflection.cpp */,
+				555DFAA921EBBBC5001D24BC /* FpUtils.cpp */,
+				555DFAAA21EBBBC6001D24BC /* FpUtils.h */,
 				3DC5FA031BDB7811005DA404 /* COP_FPU.cpp */,
 				3DC5FA041BDB7811005DA404 /* COP_FPU.h */,
 				3DC5FA081BDB7811005DA404 /* COP_SCU_Reflection.cpp */,
@@ -2075,6 +2081,7 @@
 				3DC5FC391BDB7811005DA404 /* EeExecutor.cpp in Sources */,
 				3DC5FC991BDB7811005DA404 /* MemoryUtils.cpp in Sources */,
 				3DC5FC301BDB7811005DA404 /* COP_SCU_Reflection.cpp in Sources */,
+				555DFAAB21EBBBC6001D24BC /* FpUtils.cpp in Sources */,
 				3DC5FCA01BDB7811005DA404 /* MipsFunctionPatternDb.cpp in Sources */,
 				3DC5FC911BDB7811005DA404 /* IszImageStream.cpp in Sources */,
 				3DC5FCB31BDB7811005DA404 /* StructCollectionStateFile.cpp in Sources */,
