@@ -231,7 +231,7 @@ private:
 - (oneway void)didMovePS2JoystickDirection:(OEPS2Button)button withValue:(CGFloat)value forPlayer:(NSUInteger)player
 {
     //TODO: find real scale value
-    uint32 val = value * 255;
+    uint32 val = value * 0x7f;
     for(auto bindingIterator(std::begin(_bindings));
         bindingIterator != std::end(_bindings); bindingIterator++)
     {
@@ -431,11 +431,11 @@ uint32 CSimulatedAxisBinding::GetValue() const
     
     if(m_negativeState)
     {
-        value -= 0x7F;
-    }
+        value -= m_negativeState;
+    } else
     if(m_positiveState)
     {
-        value += 0x7F;
+        value += m_positiveState;
     }
     
     return value;
