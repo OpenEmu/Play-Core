@@ -148,10 +148,10 @@ private:
     _bindings[PS2::CControllerInfo::R2] = std::make_shared<CSimpleBinding>(OEPS2ButtonR2);
     _bindings[PS2::CControllerInfo::R3] = std::make_shared<CSimpleBinding>(OEPS2ButtonR3);
     _bindings[PS2::CControllerInfo::R3] = std::make_shared<CSimpleBinding>(OEPS2ButtonR3);
-    _bindings[PS2::CControllerInfo::ANALOG_LEFT_X] = std::make_shared<CSimulatedAxisBinding>(OEPS2LeftAnalogUp,OEPS2LeftAnalogDown);
-    _bindings[PS2::CControllerInfo::ANALOG_LEFT_Y] = std::make_shared<CSimulatedAxisBinding>(OEPS2LeftAnalogLeft,OEPS2LeftAnalogRight);
-    _bindings[PS2::CControllerInfo::ANALOG_RIGHT_X] = std::make_shared<CSimulatedAxisBinding>(OEPS2RightAnalogUp,OEPS2RightAnalogDown);
-    _bindings[PS2::CControllerInfo::ANALOG_RIGHT_Y] = std::make_shared<CSimulatedAxisBinding>(OEPS2RightAnalogLeft,OEPS2RightAnalogRight);
+    _bindings[PS2::CControllerInfo::ANALOG_LEFT_X] = std::make_shared<CSimulatedAxisBinding>(OEPS2LeftAnalogLeft,OEPS2LeftAnalogRight);
+    _bindings[PS2::CControllerInfo::ANALOG_LEFT_Y] = std::make_shared<CSimulatedAxisBinding>(OEPS2LeftAnalogUp,OEPS2LeftAnalogDown);
+    _bindings[PS2::CControllerInfo::ANALOG_RIGHT_X] = std::make_shared<CSimulatedAxisBinding>(OEPS2RightAnalogLeft,OEPS2RightAnalogRight);
+    _bindings[PS2::CControllerInfo::ANALOG_RIGHT_Y] = std::make_shared<CSimulatedAxisBinding>(OEPS2RightAnalogUp,OEPS2RightAnalogDown);
 
     // TODO: In Debug disable dynarec?
     // TODO: TODO: Set mc0, mc1 directories to save dir. Set host directory to BIOS dir?
