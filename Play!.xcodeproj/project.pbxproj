@@ -901,6 +901,36 @@
 		5572392C1E47083000AF40D3 /* Iop_Heaplib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Iop_Heaplib.h; sourceTree = "<group>"; };
 		5572392E1E47091F00AF40D3 /* Iop_Thvpool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Iop_Thvpool.cpp; sourceTree = "<group>"; };
 		5572392F1E47091F00AF40D3 /* Iop_Thvpool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Iop_Thvpool.h; sourceTree = "<group>"; };
+		55B0F84F25536FDD000D01C9 /* GSH_VulkanPipelineCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSH_VulkanPipelineCache.h; sourceTree = "<group>"; };
+		55B0F85025536FDD000D01C9 /* GSH_VulkanDraw.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GSH_VulkanDraw.cpp; sourceTree = "<group>"; };
+		55B0F85125536FDD000D01C9 /* GSH_VulkanFrameCommandBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSH_VulkanFrameCommandBuffer.h; sourceTree = "<group>"; };
+		55B0F85225536FDD000D01C9 /* GSH_VulkanTransferLocal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSH_VulkanTransferLocal.h; sourceTree = "<group>"; };
+		55B0F85325536FDD000D01C9 /* GSH_Vulkan.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GSH_Vulkan.cpp; sourceTree = "<group>"; };
+		55B0F85525536FDD000D01C9 /* GSH_VulkanDraw.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSH_VulkanDraw.h; sourceTree = "<group>"; };
+		55B0F85625536FDD000D01C9 /* GSH_VulkanMemoryUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSH_VulkanMemoryUtils.h; sourceTree = "<group>"; };
+		55B0F85725536FDD000D01C9 /* GSH_VulkanMemoryUtils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GSH_VulkanMemoryUtils.cpp; sourceTree = "<group>"; };
+		55B0F85825536FDD000D01C9 /* GSH_VulkanClutLoad.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GSH_VulkanClutLoad.cpp; sourceTree = "<group>"; };
+		55B0F85925536FDD000D01C9 /* GSH_VulkanContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSH_VulkanContext.h; sourceTree = "<group>"; };
+		55B0F85A25536FDD000D01C9 /* GSH_VulkanTransferHost.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GSH_VulkanTransferHost.cpp; sourceTree = "<group>"; };
+		55B0F85B25536FDD000D01C9 /* GSH_VulkanTransferLocal.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GSH_VulkanTransferLocal.cpp; sourceTree = "<group>"; };
+		55B0F85C25536FDD000D01C9 /* GSH_VulkanDeviceInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSH_VulkanDeviceInfo.h; sourceTree = "<group>"; };
+		55B0F85D25536FDD000D01C9 /* GSH_Vulkan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSH_Vulkan.h; sourceTree = "<group>"; };
+		55B0F85E25536FDD000D01C9 /* GSH_VulkanDeviceInfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GSH_VulkanDeviceInfo.cpp; sourceTree = "<group>"; };
+		55B0F85F25536FDD000D01C9 /* GSH_VulkanFrameCommandBuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GSH_VulkanFrameCommandBuffer.cpp; sourceTree = "<group>"; };
+		55B0F86025536FDD000D01C9 /* GSH_VulkanPresent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSH_VulkanPresent.h; sourceTree = "<group>"; };
+		55B0F86125536FDD000D01C9 /* GSH_VulkanClutLoad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSH_VulkanClutLoad.h; sourceTree = "<group>"; };
+		55B0F86225536FDD000D01C9 /* GSH_VulkanTransferHost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSH_VulkanTransferHost.h; sourceTree = "<group>"; };
+		55B0F86325536FDD000D01C9 /* GSH_VulkanPresent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GSH_VulkanPresent.cpp; sourceTree = "<group>"; };
+		55B0F892255370E3000D01C9 /* VulkanDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VulkanDef.h; sourceTree = "<group>"; };
+		55B0F893255370E3000D01C9 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		55B0F894255370E3000D01C9 /* Device.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Device.h; sourceTree = "<group>"; };
+		55B0F895255370E3000D01C9 /* ShaderModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderModule.h; sourceTree = "<group>"; };
+		55B0F896255370E3000D01C9 /* Buffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Buffer.h; sourceTree = "<group>"; };
+		55B0F897255370E3000D01C9 /* StructDefs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StructDefs.h; sourceTree = "<group>"; };
+		55B0F898255370E3000D01C9 /* Loader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Loader.h; sourceTree = "<group>"; };
+		55B0F899255370E3000D01C9 /* Instance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Instance.h; sourceTree = "<group>"; };
+		55B0F89A255370E3000D01C9 /* CommandBufferPool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommandBufferPool.h; sourceTree = "<group>"; };
+		55B0F89B255370E3000D01C9 /* Image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
 		8D5B49B6048680CD000E48DA /* Play!.oecoreplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Play!.oecoreplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		942597D0151470840074E3A3 /* OpenEmuBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEmuBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1190,9 +1220,6 @@
 		3DC5F9FA1BDB7811005DA404 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				551E4814255368A400AA6B38 /* discimages */,
-				5535260D218E36AF006A4AED /* s3stream */,
-				55352609218E3664006A4AED /* psx */,
 				3DC5F9FB1BDB7811005DA404 /* AppConfig.cpp */,
 				3DC5F9FC1BDB7811005DA404 /* AppConfig.h */,
 				3DC5F9FE1BDB7811005DA404 /* BasicBlock.cpp */,
@@ -1203,13 +1230,12 @@
 				3DC5FA011BDB7811005DA404 /* ControllerInfo.cpp */,
 				3DC5FA021BDB7811005DA404 /* ControllerInfo.h */,
 				3DC5FA051BDB7811005DA404 /* COP_FPU_Reflection.cpp */,
-				555DFAA921EBBBC5001D24BC /* FpUtils.cpp */,
-				555DFAAA21EBBBC6001D24BC /* FpUtils.h */,
 				3DC5FA031BDB7811005DA404 /* COP_FPU.cpp */,
 				3DC5FA041BDB7811005DA404 /* COP_FPU.h */,
 				3DC5FA081BDB7811005DA404 /* COP_SCU_Reflection.cpp */,
 				3DC5FA061BDB7811005DA404 /* COP_SCU.cpp */,
 				3DC5FA071BDB7811005DA404 /* COP_SCU.h */,
+				551E4814255368A400AA6B38 /* discimages */,
 				3DC5FA0B1BDB7811005DA404 /* DiskUtils.cpp */,
 				3DC5FA0C1BDB7811005DA404 /* DiskUtils.h */,
 				3DC5FA0D1BDB7811005DA404 /* ee */,
@@ -1217,6 +1243,8 @@
 				3DC5FA501BDB7811005DA404 /* ELF.h */,
 				3DC5FA511BDB7811005DA404 /* ElfFile.cpp */,
 				3DC5FA521BDB7811005DA404 /* ElfFile.h */,
+				555DFAA921EBBBC5001D24BC /* FpUtils.cpp */,
+				555DFAAA21EBBBC6001D24BC /* FpUtils.h */,
 				3DC5FA531BDB7811005DA404 /* FrameDump.cpp */,
 				3DC5FA541BDB7811005DA404 /* FrameDump.h */,
 				55352600218E3476006A4AED /* GenericMipsExecutor.h */,
@@ -1268,7 +1296,6 @@
 				3DC5FAF61BDB7811005DA404 /* PadListener.h */,
 				5553B7DA1EEC698D003F89B5 /* Pch.cpp */,
 				5553B7DB1EEC698D003F89B5 /* Pch.h */,
-				551E47DA2553676000AA6B38 /* states */,
 				3DC5FAF71BDB7811005DA404 /* Posix_VolumeStream.cpp */,
 				3DC5FAF81BDB7811005DA404 /* Posix_VolumeStream.h */,
 				3DC5FAF91BDB7811005DA404 /* Profiler.cpp */,
@@ -1277,10 +1304,13 @@
 				3DC5FAFE1BDB7811005DA404 /* PS2VM_Preferences.h */,
 				3DC5FAFC1BDB7811005DA404 /* PS2VM.cpp */,
 				3DC5FAFD1BDB7811005DA404 /* PS2VM.h */,
+				55352609218E3664006A4AED /* psx */,
+				5535260D218E36AF006A4AED /* s3stream */,
 				3DC5FB011BDB7811005DA404 /* saves */,
 				3DC5FB121BDB7811005DA404 /* SifDefs.h */,
 				3DC5FB131BDB7811005DA404 /* SifModule.h */,
 				3DC5FB141BDB7811005DA404 /* SifModuleAdapter.h */,
+				551E47DA2553676000AA6B38 /* states */,
 				3DC5FC241BDB7811005DA404 /* uint128.h */,
 				3DC5FC271BDB7811005DA404 /* VirtualMachine.h */,
 			);
@@ -1290,15 +1320,15 @@
 		3DC5FA0D1BDB7811005DA404 /* ee */ = {
 			isa = PBXGroup;
 			children = (
-				551E48272553690D00AA6B38 /* Ee_LibMc2.cpp */,
-				551E48282553690D00AA6B38 /* Ee_LibMc2.h */,
+				3DC5FA101BDB7811005DA404 /* COP_VU_Reflection.cpp */,
 				3DC5FA0E1BDB7811005DA404 /* COP_VU.cpp */,
 				3DC5FA0F1BDB7811005DA404 /* COP_VU.h */,
-				3DC5FA101BDB7811005DA404 /* COP_VU_Reflection.cpp */,
-				3DC5FA111BDB7811005DA404 /* DMAC.cpp */,
-				3DC5FA121BDB7811005DA404 /* DMAC.h */,
 				3DC5FA131BDB7811005DA404 /* Dmac_Channel.cpp */,
 				3DC5FA141BDB7811005DA404 /* Dmac_Channel.h */,
+				3DC5FA111BDB7811005DA404 /* DMAC.cpp */,
+				3DC5FA121BDB7811005DA404 /* DMAC.h */,
+				551E48272553690D00AA6B38 /* Ee_LibMc2.cpp */,
+				551E48282553690D00AA6B38 /* Ee_LibMc2.h */,
 				3DC5FA151BDB7811005DA404 /* Ee_SubSystem.cpp */,
 				3DC5FA161BDB7811005DA404 /* Ee_SubSystem.h */,
 				3DC5FA171BDB7811005DA404 /* EEAssembler.cpp */,
@@ -1313,8 +1343,6 @@
 				3DC5FA201BDB7811005DA404 /* GIF.h */,
 				3DC5FA211BDB7811005DA404 /* INTC.cpp */,
 				3DC5FA221BDB7811005DA404 /* INTC.h */,
-				3DC5FA231BDB7811005DA404 /* IPU.cpp */,
-				3DC5FA241BDB7811005DA404 /* IPU.h */,
 				3DC5FA251BDB7811005DA404 /* IPU_DmVectorTable.cpp */,
 				3DC5FA261BDB7811005DA404 /* IPU_DmVectorTable.h */,
 				3DC5FA271BDB7811005DA404 /* IPU_MacroblockAddressIncrementTable.cpp */,
@@ -1327,15 +1355,17 @@
 				3DC5FA2E1BDB7811005DA404 /* IPU_MacroblockTypePTable.h */,
 				3DC5FA2F1BDB7811005DA404 /* IPU_MotionCodeTable.cpp */,
 				3DC5FA301BDB7811005DA404 /* IPU_MotionCodeTable.h */,
+				3DC5FA231BDB7811005DA404 /* IPU.cpp */,
+				3DC5FA241BDB7811005DA404 /* IPU.h */,
+				3DC5FA331BDB7811005DA404 /* MA_EE_Reflection.cpp */,
 				3DC5FA311BDB7811005DA404 /* MA_EE.cpp */,
 				3DC5FA321BDB7811005DA404 /* MA_EE.h */,
-				3DC5FA331BDB7811005DA404 /* MA_EE_Reflection.cpp */,
-				3DC5FA341BDB7811005DA404 /* MA_VU.cpp */,
-				3DC5FA351BDB7811005DA404 /* MA_VU.h */,
 				3DC5FA361BDB7811005DA404 /* MA_VU_Lower.cpp */,
 				3DC5FA371BDB7811005DA404 /* MA_VU_LowerReflection.cpp */,
 				3DC5FA381BDB7811005DA404 /* MA_VU_Upper.cpp */,
 				3DC5FA391BDB7811005DA404 /* MA_VU_UpperReflection.cpp */,
+				3DC5FA341BDB7811005DA404 /* MA_VU.cpp */,
+				3DC5FA351BDB7811005DA404 /* MA_VU.h */,
 				3DC5FA3A1BDB7811005DA404 /* PS2OS.cpp */,
 				3DC5FA3B1BDB7811005DA404 /* PS2OS.h */,
 				3DC5FA3C1BDB7811005DA404 /* SIF.cpp */,
@@ -1354,9 +1384,9 @@
 				3DC5FA491BDB7811005DA404 /* VuBasicBlock.h */,
 				3DC5FA4A1BDB7811005DA404 /* VuExecutor.cpp */,
 				3DC5FA4B1BDB7811005DA404 /* VuExecutor.h */,
+				3DC5FA4E1BDB7811005DA404 /* VUShared_Reflection.cpp */,
 				3DC5FA4C1BDB7811005DA404 /* VUShared.cpp */,
 				3DC5FA4D1BDB7811005DA404 /* VUShared.h */,
-				3DC5FA4E1BDB7811005DA404 /* VUShared_Reflection.cpp */,
 			);
 			path = ee;
 			sourceTree = "<group>";
@@ -1369,6 +1399,7 @@
 				3DC5FA581BDB7811005DA404 /* GSH_Null.cpp */,
 				3DC5FA591BDB7811005DA404 /* GSH_Null.h */,
 				3DC5FA5A1BDB7811005DA404 /* GSH_OpenGL */,
+				55B0F84E25536FDD000D01C9 /* GSH_Vulkan */,
 				3DC5FA5F1BDB7811005DA404 /* GSHandler.cpp */,
 				3DC5FA601BDB7811005DA404 /* GSHandler.h */,
 				3DC5FA611BDB7811005DA404 /* GsPixelFormats.cpp */,
@@ -1660,13 +1691,14 @@
 				3DC5FEAE1BDB7FF6005DA404 /* stricmp.h */,
 				3DC5FEB01BDB7FF6005DA404 /* string_cast_sjis.h */,
 				3DC5FEB11BDB7FF6005DA404 /* string_cast_win1252.h */,
-				551E48302553699B00AA6B38 /* StringUtils.h */,
 				3DC5FEAF1BDB7FF6005DA404 /* string_cast.h */,
 				3DC5FEB21BDB7FF6005DA404 /* string_format.h */,
+				551E48302553699B00AA6B38 /* StringUtils.h */,
 				3DC5FEB31BDB7FF6005DA404 /* tcharx.h */,
 				3DC5FEB41BDB7FF6005DA404 /* ThreadPool.h */,
 				3DC5FEB51BDB7FF6005DA404 /* Types.h */,
 				3DC5FEB61BDB7FF6005DA404 /* Utf8.h */,
+				55B0F891255370E3000D01C9 /* vulkan */,
 				3DC5FEF11BDB7FF6005DA404 /* xml */,
 				3DC5FEF71BDB7FF6005DA404 /* zip */,
 			);
@@ -1852,13 +1884,13 @@
 			isa = PBXGroup;
 			children = (
 				551E4815255368A400AA6B38 /* CsoImageStream.cpp */,
-				551E4816255368A400AA6B38 /* MdsDiscImage.h */,
-				551E4817255368A400AA6B38 /* IszImageStream.h */,
-				551E4818255368A400AA6B38 /* CueSheet.cpp */,
 				551E4819255368A400AA6B38 /* CsoImageStream.h */,
-				551E481A255368A400AA6B38 /* MdsDiscImage.cpp */,
-				551E481B255368A400AA6B38 /* IszImageStream.cpp */,
+				551E4818255368A400AA6B38 /* CueSheet.cpp */,
 				551E481C255368A400AA6B38 /* CueSheet.h */,
+				551E481B255368A400AA6B38 /* IszImageStream.cpp */,
+				551E4817255368A400AA6B38 /* IszImageStream.h */,
+				551E481A255368A400AA6B38 /* MdsDiscImage.cpp */,
+				551E4816255368A400AA6B38 /* MdsDiscImage.h */,
 			);
 			path = discimages;
 			sourceTree = "<group>";
@@ -1922,6 +1954,50 @@
 				5553B7D31EEC62D1003F89B5 /* Source.h */,
 			);
 			path = openal;
+			sourceTree = "<group>";
+		};
+		55B0F84E25536FDD000D01C9 /* GSH_Vulkan */ = {
+			isa = PBXGroup;
+			children = (
+				55B0F85325536FDD000D01C9 /* GSH_Vulkan.cpp */,
+				55B0F85D25536FDD000D01C9 /* GSH_Vulkan.h */,
+				55B0F85825536FDD000D01C9 /* GSH_VulkanClutLoad.cpp */,
+				55B0F86125536FDD000D01C9 /* GSH_VulkanClutLoad.h */,
+				55B0F85925536FDD000D01C9 /* GSH_VulkanContext.h */,
+				55B0F85E25536FDD000D01C9 /* GSH_VulkanDeviceInfo.cpp */,
+				55B0F85C25536FDD000D01C9 /* GSH_VulkanDeviceInfo.h */,
+				55B0F85025536FDD000D01C9 /* GSH_VulkanDraw.cpp */,
+				55B0F85525536FDD000D01C9 /* GSH_VulkanDraw.h */,
+				55B0F85F25536FDD000D01C9 /* GSH_VulkanFrameCommandBuffer.cpp */,
+				55B0F85125536FDD000D01C9 /* GSH_VulkanFrameCommandBuffer.h */,
+				55B0F85725536FDD000D01C9 /* GSH_VulkanMemoryUtils.cpp */,
+				55B0F85625536FDD000D01C9 /* GSH_VulkanMemoryUtils.h */,
+				55B0F84F25536FDD000D01C9 /* GSH_VulkanPipelineCache.h */,
+				55B0F86325536FDD000D01C9 /* GSH_VulkanPresent.cpp */,
+				55B0F86025536FDD000D01C9 /* GSH_VulkanPresent.h */,
+				55B0F85A25536FDD000D01C9 /* GSH_VulkanTransferHost.cpp */,
+				55B0F86225536FDD000D01C9 /* GSH_VulkanTransferHost.h */,
+				55B0F85B25536FDD000D01C9 /* GSH_VulkanTransferLocal.cpp */,
+				55B0F85225536FDD000D01C9 /* GSH_VulkanTransferLocal.h */,
+			);
+			path = GSH_Vulkan;
+			sourceTree = "<group>";
+		};
+		55B0F891255370E3000D01C9 /* vulkan */ = {
+			isa = PBXGroup;
+			children = (
+				55B0F896255370E3000D01C9 /* Buffer.h */,
+				55B0F89A255370E3000D01C9 /* CommandBufferPool.h */,
+				55B0F894255370E3000D01C9 /* Device.h */,
+				55B0F89B255370E3000D01C9 /* Image.h */,
+				55B0F899255370E3000D01C9 /* Instance.h */,
+				55B0F898255370E3000D01C9 /* Loader.h */,
+				55B0F895255370E3000D01C9 /* ShaderModule.h */,
+				55B0F897255370E3000D01C9 /* StructDefs.h */,
+				55B0F893255370E3000D01C9 /* Utils.h */,
+				55B0F892255370E3000D01C9 /* VulkanDef.h */,
+			);
+			path = vulkan;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
