@@ -118,7 +118,7 @@ private:
 
 - (BOOL)loadFileAtPath:(NSString *)path error:(NSError **)error
 {
-    _romPath = path;
+    _romPath = [path copy];
     return YES;
 }
 
