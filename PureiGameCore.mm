@@ -401,10 +401,7 @@ CSimpleBinding::CSimpleBinding(OEPS2Button keyCode)
 	
 }
 
-CSimpleBinding::~CSimpleBinding()
-{
-	
-}
+CSimpleBinding::~CSimpleBinding() = default;
 
 void CSimpleBinding::ProcessEvent(OEPS2Button keyCode, uint32 state)
 {
@@ -427,10 +424,7 @@ CSimulatedAxisBinding::CSimulatedAxisBinding(OEPS2Button negativeKeyCode, OEPS2B
     
 }
 
-CSimulatedAxisBinding::~CSimulatedAxisBinding()
-{
-    
-}
+CSimulatedAxisBinding::~CSimulatedAxisBinding() = default;
 
 void CSimulatedAxisBinding::ProcessEvent(OEPS2Button keyCode, uint32 state)
 {
