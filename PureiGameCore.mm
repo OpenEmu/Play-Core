@@ -130,6 +130,7 @@ private:
 
     CAppConfig::GetInstance().SetPreferencePath(PREF_PS2_CDROM0_PATH, [_romPath fileSystemRepresentation]);
     CAppConfig::GetInstance().SetPreferenceInteger(PREF_CGSHANDLER_PRESENTATION_MODE, CGSHandler::PRESENTATION_MODE_FIT);
+    CAppConfig::GetInstance().Save();
 
     _bindings[PS2::CControllerInfo::START] = std::make_shared<CSimpleBinding>(OEPS2ButtonStart);
     _bindings[PS2::CControllerInfo::SELECT] = std::make_shared<CSimpleBinding>(OEPS2ButtonSelect);
@@ -157,7 +158,16 @@ private:
     // TODO: TODO: Set mc0, mc1 directories to save dir. Set host directory to BIOS dir?
 }
 
-// TODO: pause/play
+- (void)setPauseEmulation:(BOOL)pauseEmulation
+{
+    if (pauseEmulation) {
+        _ps2VM.Pause();
+    } else {
+        _ps2VM.Resume();
+    }
+    
+    [super setPauseEmulation:pauseEmulation];
+}
 
 // TODO: save states
 
@@ -181,6 +191,16 @@ private:
     _ps2VM.Resume();
 
     [super startEmulation];
+}
+
+- (void)resetEmulation
+{
+    _ps2VM.Destroy();
+}
+
+-(void)stopEmulation
+{
+    _ps2VM.Pause();
 }
 
 - (void)executeFrame
@@ -319,7 +339,7 @@ void CSH_OpenEmu::Write(int16 *audio, unsigned int sampleCount, unsigned int sam
 {
     GET_CURRENT_OR_RETURN();
 
-    OERingBuffer *rb = [current ringBufferAtIndex:0];
+    OERingBuffer *rb = [current audioBufferAtIndex:0];
     [rb write:audio maxLength:sampleCount*2];
 }
 
