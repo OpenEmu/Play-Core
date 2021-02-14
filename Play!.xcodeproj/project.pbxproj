@@ -228,6 +228,7 @@
 		3DC5FD8D1BDB7FB1005DA404 /* X86Assembler_Fpu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5FD731BDB7FB1005DA404 /* X86Assembler_Fpu.cpp */; };
 		3DC5FD8E1BDB7FB1005DA404 /* X86Assembler_Sse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5FD741BDB7FB1005DA404 /* X86Assembler_Sse.cpp */; };
 		5517104D25D9DFB6008D5D96 /* PathUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5517104C25D9DFB6008D5D96 /* PathUtils.mm */; };
+		5517106225D9E2CE008D5D96 /* HardDiskDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5517105E25D9E2CE008D5D96 /* HardDiskDevice.cpp */; };
 		551E47E52553676000AA6B38 /* RegisterStateFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 551E47DB2553676000AA6B38 /* RegisterStateFile.cpp */; };
 		551E47E62553676000AA6B38 /* XmlStateFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 551E47DC2553676000AA6B38 /* XmlStateFile.cpp */; };
 		551E47E72553676000AA6B38 /* StructFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 551E47DD2553676000AA6B38 /* StructFile.cpp */; };
@@ -269,7 +270,6 @@
 		5553B7CD1EEC62B1003F89B5 /* Source.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5553B7C91EEC62B1003F89B5 /* Source.cpp */; };
 		5553B7D61EEC64DF003F89B5 /* OpticalMediaDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5553B7D41EEC64DF003F89B5 /* OpticalMediaDevice.cpp */; };
 		5553B7D91EEC654D003F89B5 /* OpticalMedia.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5553B7D71EEC654D003F89B5 /* OpticalMedia.cpp */; };
-		5553B7DC1EEC698D003F89B5 /* Pch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5553B7DA1EEC698D003F89B5 /* Pch.cpp */; };
 		5553B7DE1EEC69FF003F89B5 /* MachoObjectFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5553B7DD1EEC69FF003F89B5 /* MachoObjectFile.cpp */; };
 		5553B7E41EEC6A54003F89B5 /* CoffObjectFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5553B7E31EEC6A54003F89B5 /* CoffObjectFile.cpp */; };
 		5553B7E61EEC6A72003F89B5 /* ObjectFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5553B7E51EEC6A72003F89B5 /* ObjectFile.cpp */; };
@@ -333,7 +333,7 @@
 		3D208E9D1182551500BEAA42 /* libz.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.tbd; path = usr/lib/libz.1.tbd; sourceTree = SDKROOT; };
 		3DA64E591BDE06E8003DBE72 /* libbz2.tbd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		3DC5F8451BDA24F6005DA404 /* libFramework.a */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "compiled.mach-o.dylib"; path = libFramework.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3DC5F8561BDA24FE005DA404 /* libPlay.a */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "compiled.mach-o.dylib"; path = libPlay.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DC5F8561BDA24FE005DA404 /* libPlay.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libPlay.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC5F8571BDB6D54005DA404 /* PureiGameCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureiGameCore.h; sourceTree = "<group>"; };
 		3DC5F8581BDB6D54005DA404 /* PureiGameCore.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PureiGameCore.mm; sourceTree = "<group>"; };
 		3DC5F85B1BDB6F26005DA404 /* libboost_1_57_0.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.objfile"; name = libboost_1_57_0.a; path = lib/libboost_1_57_0.a; sourceTree = "<group>"; };
@@ -796,6 +796,10 @@
 		3DC5FEFE1BDB7FF6005DA404 /* ZipStoreStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipStoreStream.h; sourceTree = "<group>"; };
 		3DE1F1921BDE1BB00061A39E /* SoundHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundHandler.h; sourceTree = "<group>"; };
 		5517104C25D9DFB6008D5D96 /* PathUtils.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PathUtils.mm; sourceTree = "<group>"; };
+		5517105E25D9E2CE008D5D96 /* HardDiskDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HardDiskDevice.cpp; sourceTree = "<group>"; };
+		5517105F25D9E2CE008D5D96 /* HardDiskDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HardDiskDevice.h; sourceTree = "<group>"; };
+		5517106025D9E2CE008D5D96 /* PathDirectoryDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathDirectoryDevice.h; sourceTree = "<group>"; };
+		5517106125D9E2CE008D5D96 /* PreferenceDirectoryDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferenceDirectoryDevice.h; sourceTree = "<group>"; };
 		551E47AA2553654400AA6B38 /* fs_std_impl.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fs_std_impl.hpp; sourceTree = "<group>"; };
 		551E47AB2553654400AA6B38 /* fs_fwd.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fs_fwd.hpp; sourceTree = "<group>"; };
 		551E47AC2553654400AA6B38 /* fs_std.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fs_std.hpp; sourceTree = "<group>"; };
@@ -1424,10 +1428,9 @@
 		3DC5FA641BDB7811005DA404 /* iop */ = {
 			isa = PBXGroup;
 			children = (
+				5517105D25D9E281008D5D96 /* ioman */,
 				3DC5FA651BDB7811005DA404 /* ArgumentIterator.cpp */,
 				3DC5FA661BDB7811005DA404 /* ArgumentIterator.h */,
-				3DC5FA671BDB7811005DA404 /* DirectoryDevice.cpp */,
-				3DC5FA681BDB7811005DA404 /* DirectoryDevice.h */,
 				3DC5FA691BDB7811005DA404 /* Ioman_Device.h */,
 				551E484B25536AA100AA6B38 /* Ioman_ScopedFile.cpp */,
 				551E484A25536AA100AA6B38 /* Ioman_ScopedFile.h */,
@@ -1526,8 +1529,6 @@
 				3DC5FAB71BDB7811005DA404 /* Iop_Vblank.h */,
 				3DC5FAB81BDB7811005DA404 /* IopBios.cpp */,
 				3DC5FAB91BDB7811005DA404 /* IopBios.h */,
-				5553B7D41EEC64DF003F89B5 /* OpticalMediaDevice.cpp */,
-				5553B7D51EEC64DF003F89B5 /* OpticalMediaDevice.h */,
 				3DC5FA8B1BDB7811005DA404 /* Iop_Module.h */,
 			);
 			path = iop;
@@ -1840,6 +1841,21 @@
 			);
 			name = Psf;
 			path = tools/PsfPlayer/Source;
+			sourceTree = "<group>";
+		};
+		5517105D25D9E281008D5D96 /* ioman */ = {
+			isa = PBXGroup;
+			children = (
+				3DC5FA671BDB7811005DA404 /* DirectoryDevice.cpp */,
+				3DC5FA681BDB7811005DA404 /* DirectoryDevice.h */,
+				5517105E25D9E2CE008D5D96 /* HardDiskDevice.cpp */,
+				5517105F25D9E2CE008D5D96 /* HardDiskDevice.h */,
+				5553B7D41EEC64DF003F89B5 /* OpticalMediaDevice.cpp */,
+				5553B7D51EEC64DF003F89B5 /* OpticalMediaDevice.h */,
+				5517106025D9E2CE008D5D96 /* PathDirectoryDevice.h */,
+				5517106125D9E2CE008D5D96 /* PreferenceDirectoryDevice.h */,
+			);
+			path = ioman;
 			sourceTree = "<group>";
 		};
 		551E47942553645D00AA6B38 /* Dependencies */ = {
@@ -2308,7 +2324,6 @@
 				3DC5FC951BDB7811005DA404 /* MA_MIPSIV_Templates.cpp in Sources */,
 				3DC5FCB21BDB7811005DA404 /* XpsSaveImporter.cpp in Sources */,
 				3DC5FC671BDB7811005DA404 /* Iop_Dynamic.cpp in Sources */,
-				5553B7DC1EEC698D003F89B5 /* Pch.cpp in Sources */,
 				3DC5FC561BDB7811005DA404 /* VUShared_Reflection.cpp in Sources */,
 				551E47E62553676000AA6B38 /* XmlStateFile.cpp in Sources */,
 				3DC5FC601BDB7811005DA404 /* GsPixelFormats.cpp in Sources */,
@@ -2324,6 +2339,7 @@
 				3DC5FCAD1BDB7811005DA404 /* PsuSaveImporter.cpp in Sources */,
 				3DC5FC2C1BDB7811005DA404 /* ControllerInfo.cpp in Sources */,
 				5535260C218E3664006A4AED /* PsxBios.cpp in Sources */,
+				5517106225D9E2CE008D5D96 /* HardDiskDevice.cpp in Sources */,
 				3DC5FC2B1BDB7811005DA404 /* BasicBlock.cpp in Sources */,
 				3DC5FC9D1BDB7811005DA404 /* MIPSAssembler.cpp in Sources */,
 				3DC5FC791BDB7811005DA404 /* Iop_SifManPs2.cpp in Sources */,
@@ -2693,6 +2709,8 @@
 				DYLIB_CURRENT_VERSION = "";
 				EXECUTABLE_EXTENSION = a;
 				EXECUTABLE_PREFIX = lib;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Play/Source/Pch.h;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				LLVM_LTO = NO;
@@ -2712,6 +2730,8 @@
 				DYLIB_CURRENT_VERSION = "";
 				EXECUTABLE_EXTENSION = a;
 				EXECUTABLE_PREFIX = lib;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Play/Source/Pch.h;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				LLVM_LTO = NO;
