@@ -126,8 +126,6 @@ private:
 {
     _current = self;
 
-    _ps2VM.Initialize();
-
     CAppConfig::GetInstance().SetPreferencePath(PREF_PS2_CDROM0_PATH, [_romPath fileSystemRepresentation]);
     NSFileManager *fm = [NSFileManager defaultManager];
     NSString *mcd0 = [self.batterySavesDirectoryPath stringByAppendingPathComponent:@"mcd0"];
@@ -149,6 +147,8 @@ private:
     CAppConfig::GetInstance().SetPreferencePath(PREF_PS2_ROM0_DIRECTORY, self.biosDirectoryPath.fileSystemRepresentation);
     CAppConfig::GetInstance().SetPreferenceInteger(PREF_CGSHANDLER_PRESENTATION_MODE, CGSHandler::PRESENTATION_MODE_FIT);
     CAppConfig::GetInstance().Save();
+    
+    _ps2VM.Initialize();
 
     _bindings[PS2::CControllerInfo::START] = std::make_shared<CSimpleBinding>(OEPS2ButtonStart);
     _bindings[PS2::CControllerInfo::SELECT] = std::make_shared<CSimpleBinding>(OEPS2ButtonSelect);
