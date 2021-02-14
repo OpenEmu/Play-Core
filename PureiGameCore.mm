@@ -129,6 +129,20 @@ private:
     _ps2VM.Initialize();
 
     CAppConfig::GetInstance().SetPreferencePath(PREF_PS2_CDROM0_PATH, [_romPath fileSystemRepresentation]);
+    NSFileManager *fm = [NSFileManager defaultManager];
+    if (![fm fileExistsAtPath:[self.batterySavesDirectoryPath stringByAppendingPathComponent:@"mcd0"]]) {
+    [fm createDirectoryAtPath:[self.batterySavesDirectoryPath stringByAppendingPathComponent:@"mcd0"] withIntermediateDirectories:YES attributes:nil error:NULL];
+    }
+    if (![fm fileExistsAtPath:[self.batterySavesDirectoryPath stringByAppendingPathComponent:@"mcd1"]]) {
+    [fm createDirectoryAtPath:[self.batterySavesDirectoryPath stringByAppendingPathComponent:@"mcd1"] withIntermediateDirectories:YES attributes:nil error:NULL];
+    }
+    if (![fm fileExistsAtPath:[self.batterySavesDirectoryPath stringByAppendingPathComponent:@"hdd"]]) {
+    [fm createDirectoryAtPath:[self.batterySavesDirectoryPath stringByAppendingPathComponent:@"hdd"] withIntermediateDirectories:YES attributes:nil error:NULL];
+    }
+    CAppConfig::GetInstance().SetPreferencePath(PREF_PS2_MC0_DIRECTORY, [self.batterySavesDirectoryPath stringByAppendingPathComponent:@"mcd0"].fileSystemRepresentation);
+    CAppConfig::GetInstance().SetPreferencePath(PREF_PS2_MC1_DIRECTORY, [self.batterySavesDirectoryPath stringByAppendingPathComponent:@"mcd1"].fileSystemRepresentation);
+    CAppConfig::GetInstance().SetPreferencePath(PREF_PS2_HOST_DIRECTORY, [self.batterySavesDirectoryPath stringByAppendingPathComponent:@"hdd"].fileSystemRepresentation);
+    CAppConfig::GetInstance().SetPreferencePath(PREF_PS2_ROM0_DIRECTORY, self.biosDirectoryPath.fileSystemRepresentation);
     CAppConfig::GetInstance().SetPreferenceInteger(PREF_CGSHANDLER_PRESENTATION_MODE, CGSHandler::PRESENTATION_MODE_FIT);
     CAppConfig::GetInstance().Save();
 
@@ -195,12 +209,12 @@ private:
 
 - (void)resetEmulation
 {
-    _ps2VM.Destroy();
+    _ps2VM.Reset();
 }
 
 -(void)stopEmulation
 {
-    _ps2VM.Pause();
+    _ps2VM.Destroy();
 }
 
 - (void)executeFrame
