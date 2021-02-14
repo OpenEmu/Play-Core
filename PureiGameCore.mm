@@ -135,13 +135,13 @@ private:
     NSString *hdd = [self.batterySavesDirectoryPath stringByAppendingPathComponent:@"hdd"];
 
     if (![fm fileExistsAtPath:mcd0]) {
-    [fm createDirectoryAtPath:mcd0 withIntermediateDirectories:YES attributes:nil error:NULL];
+        [fm createDirectoryAtPath:mcd0 withIntermediateDirectories:YES attributes:nil error:NULL];
     }
     if (![fm fileExistsAtPath:mcd1]) {
-    [fm createDirectoryAtPath:mcd1 withIntermediateDirectories:YES attributes:nil error:NULL];
+        [fm createDirectoryAtPath:mcd1 withIntermediateDirectories:YES attributes:nil error:NULL];
     }
     if (![fm fileExistsAtPath:hdd]) {
-    [fm createDirectoryAtPath:hdd withIntermediateDirectories:YES attributes:nil error:NULL];
+        [fm createDirectoryAtPath:hdd withIntermediateDirectories:YES attributes:nil error:NULL];
     }
     CAppConfig::GetInstance().SetPreferencePath(PREF_PS2_MC0_DIRECTORY, mcd0.fileSystemRepresentation);
     CAppConfig::GetInstance().SetPreferencePath(PREF_PS2_MC1_DIRECTORY, mcd1.fileSystemRepresentation);
@@ -186,7 +186,21 @@ private:
     [super setPauseEmulation:pauseEmulation];
 }
 
-// TODO: save states
+- (void)saveStateToFileAtPath:(NSString *)fileName completionHandler:(void (^)(BOOL, NSError *))block
+{
+    const fs::path fsName(fileName.fileSystemRepresentation);
+    auto success = _ps2VM.SaveState(fsName);
+    success.wait();
+    block(success.get(), nil);
+}
+
+- (void)loadStateFromFileAtPath:(NSString *)fileName completionHandler:(void (^)(BOOL, NSError *))block
+{
+    const fs::path fsName(fileName.fileSystemRepresentation);
+    auto success = _ps2VM.LoadState(fsName);
+    success.wait();
+    block(success.get(), nil);
+}
 
 - (void)startEmulation
 {
