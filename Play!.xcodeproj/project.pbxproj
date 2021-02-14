@@ -58,7 +58,6 @@
 		3DC5F9A11BDB7783005DA404 /* VLCTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5F89A1BDB7750005DA404 /* VLCTable.cpp */; };
 		3DC5F9AB1BDB7783005DA404 /* Program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5F8A81BDB7750005DA404 /* Program.cpp */; };
 		3DC5F9AC1BDB7783005DA404 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5F8A91BDB7750005DA404 /* Shader.cpp */; };
-		3DC5F9AD1BDB7783005DA404 /* PathUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5F8AA1BDB7750005DA404 /* PathUtils.cpp */; };
 		3DC5F9AF1BDB7783005DA404 /* PtrStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5F8AC1BDB7750005DA404 /* PtrStream.cpp */; };
 		3DC5F9B01BDB7783005DA404 /* StdStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5F8AD1BDB7750005DA404 /* StdStream.cpp */; };
 		3DC5F9B11BDB7783005DA404 /* StdStreamUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5F8AE1BDB7750005DA404 /* StdStreamUtils.cpp */; };
@@ -228,6 +227,7 @@
 		3DC5FD8C1BDB7FB1005DA404 /* X86Assembler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5FD721BDB7FB1005DA404 /* X86Assembler.cpp */; };
 		3DC5FD8D1BDB7FB1005DA404 /* X86Assembler_Fpu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5FD731BDB7FB1005DA404 /* X86Assembler_Fpu.cpp */; };
 		3DC5FD8E1BDB7FB1005DA404 /* X86Assembler_Sse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5FD741BDB7FB1005DA404 /* X86Assembler_Sse.cpp */; };
+		5517104D25D9DFB6008D5D96 /* PathUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5517104C25D9DFB6008D5D96 /* PathUtils.mm */; };
 		551E47E52553676000AA6B38 /* RegisterStateFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 551E47DB2553676000AA6B38 /* RegisterStateFile.cpp */; };
 		551E47E62553676000AA6B38 /* XmlStateFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 551E47DC2553676000AA6B38 /* XmlStateFile.cpp */; };
 		551E47E72553676000AA6B38 /* StructFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 551E47DD2553676000AA6B38 /* StructFile.cpp */; };
@@ -795,6 +795,7 @@
 		3DC5FEFD1BDB7FF6005DA404 /* ZipInflateStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipInflateStream.h; sourceTree = "<group>"; };
 		3DC5FEFE1BDB7FF6005DA404 /* ZipStoreStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipStoreStream.h; sourceTree = "<group>"; };
 		3DE1F1921BDE1BB00061A39E /* SoundHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundHandler.h; sourceTree = "<group>"; };
+		5517104C25D9DFB6008D5D96 /* PathUtils.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PathUtils.mm; sourceTree = "<group>"; };
 		551E47AA2553654400AA6B38 /* fs_std_impl.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fs_std_impl.hpp; sourceTree = "<group>"; };
 		551E47AB2553654400AA6B38 /* fs_fwd.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fs_fwd.hpp; sourceTree = "<group>"; };
 		551E47AC2553654400AA6B38 /* fs_std.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fs_std.hpp; sourceTree = "<group>"; };
@@ -1012,6 +1013,7 @@
 				3D0501A01BDB91F6003E98C5 /* OEPS2SystemResponderClient.h */,
 				3DC5F8571BDB6D54005DA404 /* PureiGameCore.h */,
 				3DC5F8581BDB6D54005DA404 /* PureiGameCore.mm */,
+				5517104C25D9DFB6008D5D96 /* PathUtils.mm */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -2173,7 +2175,6 @@
 				3DC5F9AB1BDB7783005DA404 /* Program.cpp in Sources */,
 				3DC5F9AC1BDB7783005DA404 /* Shader.cpp in Sources */,
 				55352621218E3732006A4AED /* AppleHttpClient.cpp in Sources */,
-				3DC5F9AD1BDB7783005DA404 /* PathUtils.cpp in Sources */,
 				551E4832255369B900AA6B38 /* StringUtils.cpp in Sources */,
 				5553B7CB1EEC62B1003F89B5 /* Context.cpp in Sources */,
 				3DC5F9AF1BDB7783005DA404 /* PtrStream.cpp in Sources */,
@@ -2369,6 +2370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5517104D25D9DFB6008D5D96 /* PathUtils.mm in Sources */,
 				3DC5F8591BDB6D54005DA404 /* PureiGameCore.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
