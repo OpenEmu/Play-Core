@@ -196,6 +196,7 @@ private:
 
 - (void)loadStateFromFileAtPath:(NSString *)fileName completionHandler:(void (^)(BOOL, NSError *))block
 {
+    //FIXME: load save state at launch fails.
     const fs::path fsName(fileName.fileSystemRepresentation);
     auto success = _ps2VM.LoadState(fsName);
     success.wait();
@@ -226,11 +227,14 @@ private:
 
 - (void)resetEmulation
 {
+    _ps2VM.Pause();
     _ps2VM.Reset();
+    _ps2VM.Resume();
 }
 
 -(void)stopEmulation
 {
+    _ps2VM.Pause();
     _ps2VM.Destroy();
 }
 
