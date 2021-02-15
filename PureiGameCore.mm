@@ -18,7 +18,7 @@
 #import <OpenEmuBase/OERingBuffer.h>
 #import <OpenEmuBase/OETimingUtils.h>
 
-static __weak PureiGameCore *_current;
+__weak PureiGameCore *_current;
 
 class CGSH_OpenEmu : public CGSH_OpenGL
 {

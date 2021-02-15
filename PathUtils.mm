@@ -31,9 +31,14 @@ using namespace Framework;
 
 fs::path PathUtils::GetRoamingDataPath()
 {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    std::string directory = [[paths objectAtIndex: 0] fileSystemRepresentation];
-    return fs::path(directory);
+    __strong __typeof__(_current) current = _current;
+    if (current == nil) {
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        std::string directory = [[paths objectAtIndex: 0] fileSystemRepresentation];
+        return fs::path(directory);
+    }
+    NSString *path = current.supportDirectoryPath;
+    return fs::path(path.fileSystemRepresentation);
 }
 
 fs::path PathUtils::GetAppResourcesPath()

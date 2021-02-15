@@ -14,3 +14,5 @@ OE_EXPORTED_CLASS
 @interface PureiGameCore : OEGameCore
 
 @end
+
+extern __weak PureiGameCore *_current;
