@@ -278,6 +278,7 @@
 		5572392A1E47075000AF40D3 /* Iop_Module.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 557239281E47075000AF40D3 /* Iop_Module.cpp */; };
 		5572392D1E47083000AF40D3 /* Iop_Heaplib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5572392B1E47083000AF40D3 /* Iop_Heaplib.cpp */; };
 		557239301E47091F00AF40D3 /* Iop_Thvpool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5572392E1E47091F00AF40D3 /* Iop_Thvpool.cpp */; };
+		55E0F8DF25E9AF52008A560D /* FrameLimiter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55E0F8DE25E9AF52008A560D /* FrameLimiter.cpp */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -936,6 +937,8 @@
 		55B0F899255370E3000D01C9 /* Instance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Instance.h; sourceTree = "<group>"; };
 		55B0F89A255370E3000D01C9 /* CommandBufferPool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommandBufferPool.h; sourceTree = "<group>"; };
 		55B0F89B255370E3000D01C9 /* Image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		55E0F8DD25E9AF51008A560D /* FrameLimiter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameLimiter.h; sourceTree = "<group>"; };
+		55E0F8DE25E9AF52008A560D /* FrameLimiter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FrameLimiter.cpp; sourceTree = "<group>"; };
 		8D5B49B6048680CD000E48DA /* Play!.oecoreplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Play!.oecoreplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		942597D0151470840074E3A3 /* OpenEmuBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEmuBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1253,6 +1256,8 @@
 				555DFAAA21EBBBC6001D24BC /* FpUtils.h */,
 				3DC5FA531BDB7811005DA404 /* FrameDump.cpp */,
 				3DC5FA541BDB7811005DA404 /* FrameDump.h */,
+				55E0F8DE25E9AF52008A560D /* FrameLimiter.cpp */,
+				55E0F8DD25E9AF51008A560D /* FrameLimiter.h */,
 				55352600218E3476006A4AED /* GenericMipsExecutor.h */,
 				3DC5FA551BDB7811005DA404 /* gs */,
 				3DC5FA631BDB7811005DA404 /* Integer64.h */,
@@ -2343,6 +2348,7 @@
 				3DC5FC2B1BDB7811005DA404 /* BasicBlock.cpp in Sources */,
 				3DC5FC9D1BDB7811005DA404 /* MIPSAssembler.cpp in Sources */,
 				3DC5FC791BDB7811005DA404 /* Iop_SifManPs2.cpp in Sources */,
+				55E0F8DF25E9AF52008A560D /* FrameLimiter.cpp in Sources */,
 				3DC5FC411BDB7811005DA404 /* IPU_MacroblockTypeBTable.cpp in Sources */,
 				3DC5FC611BDB7811005DA404 /* ArgumentIterator.cpp in Sources */,
 				3DC5FC921BDB7811005DA404 /* Log.cpp in Sources */,
