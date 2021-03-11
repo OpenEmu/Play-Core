@@ -278,6 +278,8 @@
 		5572392A1E47075000AF40D3 /* Iop_Module.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 557239281E47075000AF40D3 /* Iop_Module.cpp */; };
 		5572392D1E47083000AF40D3 /* Iop_Heaplib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5572392B1E47083000AF40D3 /* Iop_Heaplib.cpp */; };
 		557239301E47091F00AF40D3 /* Iop_Thvpool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5572392E1E47091F00AF40D3 /* Iop_Thvpool.cpp */; };
+		55A4831D25F99EAF00E6ADE3 /* Iop_Dev9.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55A4831A25F99EAE00E6ADE3 /* Iop_Dev9.cpp */; };
+		55A4831E25F99EAF00E6ADE3 /* Iop_Speed.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55A4831C25F99EAE00E6ADE3 /* Iop_Speed.cpp */; };
 		55E0F8DF25E9AF52008A560D /* FrameLimiter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55E0F8DE25E9AF52008A560D /* FrameLimiter.cpp */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -907,6 +909,10 @@
 		5572392C1E47083000AF40D3 /* Iop_Heaplib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Iop_Heaplib.h; sourceTree = "<group>"; };
 		5572392E1E47091F00AF40D3 /* Iop_Thvpool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Iop_Thvpool.cpp; sourceTree = "<group>"; };
 		5572392F1E47091F00AF40D3 /* Iop_Thvpool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Iop_Thvpool.h; sourceTree = "<group>"; };
+		55A4831925F99EAE00E6ADE3 /* Iop_Speed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Iop_Speed.h; sourceTree = "<group>"; };
+		55A4831A25F99EAE00E6ADE3 /* Iop_Dev9.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Iop_Dev9.cpp; sourceTree = "<group>"; };
+		55A4831B25F99EAE00E6ADE3 /* Iop_Dev9.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Iop_Dev9.h; sourceTree = "<group>"; };
+		55A4831C25F99EAE00E6ADE3 /* Iop_Speed.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Iop_Speed.cpp; sourceTree = "<group>"; };
 		55B0F84F25536FDD000D01C9 /* GSH_VulkanPipelineCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSH_VulkanPipelineCache.h; sourceTree = "<group>"; };
 		55B0F85025536FDD000D01C9 /* GSH_VulkanDraw.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GSH_VulkanDraw.cpp; sourceTree = "<group>"; };
 		55B0F85125536FDD000D01C9 /* GSH_VulkanFrameCommandBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSH_VulkanFrameCommandBuffer.h; sourceTree = "<group>"; };
@@ -1433,9 +1439,9 @@
 		3DC5FA641BDB7811005DA404 /* iop */ = {
 			isa = PBXGroup;
 			children = (
-				5517105D25D9E281008D5D96 /* ioman */,
 				3DC5FA651BDB7811005DA404 /* ArgumentIterator.cpp */,
 				3DC5FA661BDB7811005DA404 /* ArgumentIterator.h */,
+				5517105D25D9E281008D5D96 /* ioman */,
 				3DC5FA691BDB7811005DA404 /* Ioman_Device.h */,
 				551E484B25536AA100AA6B38 /* Ioman_ScopedFile.cpp */,
 				551E484A25536AA100AA6B38 /* Ioman_ScopedFile.h */,
@@ -1444,6 +1450,8 @@
 				3DC5FA6C1BDB7811005DA404 /* Iop_Cdvdfsv.h */,
 				3DC5FA6D1BDB7811005DA404 /* Iop_Cdvdman.cpp */,
 				3DC5FA6E1BDB7811005DA404 /* Iop_Cdvdman.h */,
+				55A4831A25F99EAE00E6ADE3 /* Iop_Dev9.cpp */,
+				55A4831B25F99EAE00E6ADE3 /* Iop_Dev9.h */,
 				3DC5FA6F1BDB7811005DA404 /* Iop_Dmac.cpp */,
 				3DC5FA701BDB7811005DA404 /* Iop_Dmac.h */,
 				3DC5FA711BDB7811005DA404 /* Iop_DmacChannel.cpp */,
@@ -1500,6 +1508,8 @@
 				3DC5FA991BDB7811005DA404 /* Iop_SifManPs2.h */,
 				3DC5FA9A1BDB7811005DA404 /* Iop_Sio2.cpp */,
 				3DC5FA9B1BDB7811005DA404 /* Iop_Sio2.h */,
+				55A4831C25F99EAE00E6ADE3 /* Iop_Speed.cpp */,
+				55A4831925F99EAE00E6ADE3 /* Iop_Speed.h */,
 				3DC5FA9C1BDB7811005DA404 /* Iop_Spu.cpp */,
 				3DC5FA9D1BDB7811005DA404 /* Iop_Spu.h */,
 				3DC5FAA01BDB7811005DA404 /* Iop_Spu2_Core.cpp */,
@@ -2228,6 +2238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55A4831D25F99EAF00E6ADE3 /* Iop_Dev9.cpp in Sources */,
 				3DC5FC3E1BDB7811005DA404 /* IPU.cpp in Sources */,
 				3DC5FC971BDB7811005DA404 /* MemoryMap.cpp in Sources */,
 				3DC5FC651BDB7811005DA404 /* Iop_Dmac.cpp in Sources */,
@@ -2305,6 +2316,7 @@
 				3DC5FC5F1BDB7811005DA404 /* GSHandler.cpp in Sources */,
 				551E488C25536C8E00AA6B38 /* Iop_PathUtils.cpp in Sources */,
 				3DC5FC431BDB7811005DA404 /* IPU_MacroblockTypePTable.cpp in Sources */,
+				55A4831E25F99EAF00E6ADE3 /* Iop_Speed.cpp in Sources */,
 				551E47E52553676000AA6B38 /* RegisterStateFile.cpp in Sources */,
 				3DC5FC8B1BDB7811005DA404 /* DirectoryRecord.cpp in Sources */,
 				3DC5FC451BDB7811005DA404 /* MA_EE.cpp in Sources */,
