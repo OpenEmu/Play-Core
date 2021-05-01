@@ -355,6 +355,8 @@ void CGSH_OpenEmu::PresentBackbuffer()
     [current.renderDelegate willRenderFrameOnAlternateThread];
 }
 
+#pragma mark - Sound callbacks
+
 void CSH_OpenEmu::Reset()
 {
 
@@ -388,6 +390,8 @@ CSoundHandler::FactoryFunction CSH_OpenEmu::GetFactoryFunction()
 {
     return SoundHandlerFactory;
 }
+
+#pragma mark - Pad callbacks
 
 void CPH_OpenEmu::Update(uint8* ram)
 {
@@ -427,7 +431,7 @@ CPadHandler::FactoryFunction CPH_OpenEmu::GetFactoryFunction()
     return PadHandlerFactory;
 }
 
-//---------------------------------------------------------------------------------
+#pragma mark -
 
 CSimpleBinding::CSimpleBinding(OEPS2Button keyCode)
 : m_keyCode(keyCode)
@@ -449,7 +453,8 @@ uint32 CSimpleBinding::GetValue() const
     return m_state;
 }
 
-//---------------------------------------------------------------------------------
+#pragma mark -
+
 CSimulatedAxisBinding::CSimulatedAxisBinding(OEPS2Button negativeKeyCode, OEPS2Button positiveKeyCode)
 : m_negativeKeyCode(negativeKeyCode)
 , m_positiveKeyCode(positiveKeyCode)

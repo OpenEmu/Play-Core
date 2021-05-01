@@ -803,6 +803,7 @@
 		5517105F25D9E2CE008D5D96 /* HardDiskDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HardDiskDevice.h; sourceTree = "<group>"; };
 		5517106025D9E2CE008D5D96 /* PathDirectoryDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathDirectoryDevice.h; sourceTree = "<group>"; };
 		5517106125D9E2CE008D5D96 /* PreferenceDirectoryDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferenceDirectoryDevice.h; sourceTree = "<group>"; };
+		5517FE3A263DF9AE000219EC /* FutureContinuationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FutureContinuationManager.h; sourceTree = "<group>"; };
 		551E47AA2553654400AA6B38 /* fs_std_impl.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fs_std_impl.hpp; sourceTree = "<group>"; };
 		551E47AB2553654400AA6B38 /* fs_fwd.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fs_fwd.hpp; sourceTree = "<group>"; };
 		551E47AC2553654400AA6B38 /* fs_std.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fs_std.hpp; sourceTree = "<group>"; };
@@ -1264,6 +1265,7 @@
 				3DC5FA541BDB7811005DA404 /* FrameDump.h */,
 				55E0F8DE25E9AF52008A560D /* FrameLimiter.cpp */,
 				55E0F8DD25E9AF51008A560D /* FrameLimiter.h */,
+				5517FE3A263DF9AE000219EC /* FutureContinuationManager.h */,
 				55352600218E3476006A4AED /* GenericMipsExecutor.h */,
 				3DC5FA551BDB7811005DA404 /* gs */,
 				3DC5FA631BDB7811005DA404 /* Integer64.h */,
