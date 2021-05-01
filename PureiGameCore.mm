@@ -166,7 +166,6 @@ private:
     _bindings[PS2::CControllerInfo::R1] = std::make_shared<CSimpleBinding>(OEPS2ButtonR1);
     _bindings[PS2::CControllerInfo::R2] = std::make_shared<CSimpleBinding>(OEPS2ButtonR2);
     _bindings[PS2::CControllerInfo::R3] = std::make_shared<CSimpleBinding>(OEPS2ButtonR3);
-    _bindings[PS2::CControllerInfo::R3] = std::make_shared<CSimpleBinding>(OEPS2ButtonR3);
     _bindings[PS2::CControllerInfo::ANALOG_LEFT_X] = std::make_shared<CSimulatedAxisBinding>(OEPS2LeftAnalogLeft,OEPS2LeftAnalogRight);
     _bindings[PS2::CControllerInfo::ANALOG_LEFT_Y] = std::make_shared<CSimulatedAxisBinding>(OEPS2LeftAnalogUp,OEPS2LeftAnalogDown);
     _bindings[PS2::CControllerInfo::ANALOG_RIGHT_X] = std::make_shared<CSimulatedAxisBinding>(OEPS2RightAnalogLeft,OEPS2RightAnalogRight);
