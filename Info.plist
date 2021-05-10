@@ -35,7 +35,7 @@
 		</dict>
 	</dict>
 	<key>OEGameCorePlayerCount</key>
-	<string>1</string>
+	<integer>1</integer>
 	<key>OEProjectURL</key>
 	<string>http://purei.org/</string>
 	<key>OESystemIdentifiers</key>

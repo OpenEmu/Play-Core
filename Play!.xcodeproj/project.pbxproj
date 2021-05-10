@@ -2487,6 +2487,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "\"$(USER_LIBRARY_DIR)/Application Support/OpenEmu/Cores\"";
 				LD_RUNPATH_SEARCH_PATHS = "\"~/Library/Graphics/Quartz Composer Plug-Ins/OpenEmuQC.plugin/Contents/Frameworks/\" \"/Library/Graphics/Quartz Composer Plug-Ins/OpenEmuQC.plugin/Contents/Frameworks/\" ~/Library/Frameworks /Library/Frameworks @loader_path/../Frameworks";
+				MARKETING_VERSION = 2.5;
 				OTHER_LDFLAGS = (
 					"-x",
 					"objective-c++",
@@ -2516,6 +2517,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "\"$(USER_LIBRARY_DIR)/Application Support/OpenEmu/Cores\"";
 				LD_RUNPATH_SEARCH_PATHS = "\"~/Library/Graphics/Quartz Composer Plug-Ins/OpenEmuQC.plugin/Contents/Frameworks/\" \"/Library/Graphics/Quartz Composer Plug-Ins/OpenEmuQC.plugin/Contents/Frameworks/\" ~/Library/Frameworks /Library/Frameworks @loader_path/../Frameworks";
+				MARKETING_VERSION = 2.5;
 				OTHER_LDFLAGS = (
 					"-x",
 					"objective-c++",

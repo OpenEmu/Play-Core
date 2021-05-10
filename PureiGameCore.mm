@@ -284,6 +284,10 @@ private:
 
 - (oneway void)didMovePS2JoystickDirection:(OEPS2Button)button withValue:(CGFloat)value forPlayer:(NSUInteger)player
 {
+    // FIXME: Player 2 is not yet supported.
+    if (player != 1) {
+        return;
+    }
     //TODO: find real scale value
     uint32 val = value * 0x7f;
     for(auto bindingIterator(std::begin(_bindings));
@@ -297,6 +301,10 @@ private:
 
 - (oneway void)didPushPS2Button:(OEPS2Button)button forPlayer:(NSUInteger)player
 {
+    // FIXME: Player 2 is not yet supported.
+    if (player != 1) {
+        return;
+    }
     for(auto bindingIterator(std::begin(_bindings));
         bindingIterator != std::end(_bindings); bindingIterator++)
     {
@@ -308,6 +316,10 @@ private:
 
 - (oneway void)didReleasePS2Button:(OEPS2Button)button forPlayer:(NSUInteger)player
 {
+    // FIXME: Player 2 is not yet supported.
+    if (player != 1) {
+        return;
+    }
     for(auto bindingIterator(std::begin(_bindings));
         bindingIterator != std::end(_bindings); bindingIterator++)
     {
