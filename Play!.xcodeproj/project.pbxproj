@@ -878,6 +878,7 @@
 		55352629218E3783006A4AED /* HttpClientFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpClientFactory.h; sourceTree = "<group>"; };
 		5535262C218E3783006A4AED /* AppleHttpClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppleHttpClient.h; sourceTree = "<group>"; };
 		5535262E218E3783006A4AED /* HttpClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpClient.h; sourceTree = "<group>"; };
+		55453725266836170097DD71 /* static_loop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = static_loop.h; sourceTree = "<group>"; };
 		554A1BFC2644F39B009FE60D /* GsSpriteRegion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GsSpriteRegion.h; sourceTree = "<group>"; };
 		554A1BFD2644F39B009FE60D /* GsTextureCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GsTextureCache.h; sourceTree = "<group>"; };
 		5553B7C61EEC62B1003F89B5 /* Buffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Buffer.cpp; sourceTree = "<group>"; };
@@ -1332,6 +1333,7 @@
 				3DC5FB131BDB7811005DA404 /* SifModule.h */,
 				3DC5FB141BDB7811005DA404 /* SifModuleAdapter.h */,
 				551E47DA2553676000AA6B38 /* states */,
+				55453725266836170097DD71 /* static_loop.h */,
 				3DC5FC241BDB7811005DA404 /* uint128.h */,
 				3DC5FC271BDB7811005DA404 /* VirtualMachine.h */,
 			);
