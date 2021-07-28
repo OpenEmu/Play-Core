@@ -33,8 +33,8 @@ fs::path PathUtils::GetRoamingDataPath()
 {
     __strong __typeof__(_current) current = _current;
     if (current == nil) {
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        std::string directory = [[paths objectAtIndex: 0] fileSystemRepresentation];
+        NSURL *url = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:YES error:nil];
+        std::string directory = [url fileSystemRepresentation];
         return fs::path(directory);
     }
     NSString *path = current.supportDirectoryPath;
@@ -44,8 +44,8 @@ fs::path PathUtils::GetRoamingDataPath()
 fs::path PathUtils::GetAppResourcesPath()
 {
     NSBundle* bundle = [NSBundle bundleForClass:[PureiGameCore class]];
-    NSString* bundlePath = [bundle resourcePath];
-    return fs::path([bundlePath fileSystemRepresentation]);
+    NSURL* bundleURL = [bundle resourceURL];
+    return fs::path([bundleURL fileSystemRepresentation]);
 }
 
 fs::path PathUtils::GetPersonalDataPath()
@@ -55,8 +55,8 @@ fs::path PathUtils::GetPersonalDataPath()
 
 fs::path PathUtils::GetCachePath()
 {
-    NSArray* paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
-    std::string directory = [[paths objectAtIndex: 0] fileSystemRepresentation];
+    NSURL* url = [[NSFileManager defaultManager] URLForDirectory:NSCachesDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:YES error:nil];
+    std::string directory = [url fileSystemRepresentation];
     return fs::path(directory);
 }
 
