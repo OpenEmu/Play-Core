@@ -264,6 +264,25 @@
 		55352621218E3732006A4AED /* AppleHttpClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55352618218E3731006A4AED /* AppleHttpClient.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		55352624218E3732006A4AED /* HttpClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5535261B218E3731006A4AED /* HttpClient.cpp */; };
 		55352625218E3732006A4AED /* HttpClientFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5535261C218E3731006A4AED /* HttpClientFactory.cpp */; };
+		553A882426B119370033A909 /* libchdr_flac.c in Sources */ = {isa = PBXBuildFile; fileRef = 553A87CF26B118870033A909 /* libchdr_flac.c */; };
+		553A882526B119370033A909 /* libchdr_huffman.c in Sources */ = {isa = PBXBuildFile; fileRef = 553A87CD26B118870033A909 /* libchdr_huffman.c */; };
+		553A882626B119370033A909 /* libchdr_cdrom.c in Sources */ = {isa = PBXBuildFile; fileRef = 553A87D126B118870033A909 /* libchdr_cdrom.c */; };
+		553A882726B119370033A909 /* libchdr_file.c in Sources */ = {isa = PBXBuildFile; fileRef = 553A87CE26B118870033A909 /* libchdr_file.c */; };
+		553A882826B119370033A909 /* libchdr_bitstream.c in Sources */ = {isa = PBXBuildFile; fileRef = 553A87CC26B118870033A909 /* libchdr_bitstream.c */; };
+		553A882926B119370033A909 /* libchdr_chd.c in Sources */ = {isa = PBXBuildFile; fileRef = 553A87CB26B118870033A909 /* libchdr_chd.c */; };
+		553A882C26B1194B0033A909 /* libchdr-play.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 553A882026B119100033A909 /* libchdr-play.a */; };
+		553A883126B119D50033A909 /* ChdImageStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 553A882D26B119D50033A909 /* ChdImageStream.cpp */; };
+		553A883226B119D50033A909 /* ChdStreamSupport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 553A882F26B119D50033A909 /* ChdStreamSupport.cpp */; };
+		553A888826B11A680033A909 /* Bra86.c in Sources */ = {isa = PBXBuildFile; fileRef = 553A888126B11A430033A909 /* Bra86.c */; };
+		553A888926B11A680033A909 /* BraIA64.c in Sources */ = {isa = PBXBuildFile; fileRef = 553A888426B11A430033A909 /* BraIA64.c */; };
+		553A888A26B11A680033A909 /* LzmaDec.c in Sources */ = {isa = PBXBuildFile; fileRef = 553A888326B11A430033A909 /* LzmaDec.c */; };
+		553A888B26B11A680033A909 /* Lzma86Dec.c in Sources */ = {isa = PBXBuildFile; fileRef = 553A888526B11A430033A909 /* Lzma86Dec.c */; };
+		553A888C26B11A680033A909 /* CpuArch.c in Sources */ = {isa = PBXBuildFile; fileRef = 553A888726B11A430033A909 /* CpuArch.c */; };
+		553A888D26B11A680033A909 /* Sort.c in Sources */ = {isa = PBXBuildFile; fileRef = 553A888026B11A430033A909 /* Sort.c */; };
+		553A888E26B11A680033A909 /* Delta.c in Sources */ = {isa = PBXBuildFile; fileRef = 553A888626B11A430033A909 /* Delta.c */; };
+		553A888F26B11A680033A909 /* LzmaEnc.c in Sources */ = {isa = PBXBuildFile; fileRef = 553A887E26B11A430033A909 /* LzmaEnc.c */; };
+		553A889026B11A680033A909 /* LzFind.c in Sources */ = {isa = PBXBuildFile; fileRef = 553A887F26B11A430033A909 /* LzFind.c */; };
+		553A889126B11A680033A909 /* Alloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 553A888226B11A430033A909 /* Alloc.c */; };
 		5553B7CA1EEC62B1003F89B5 /* Buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5553B7C61EEC62B1003F89B5 /* Buffer.cpp */; };
 		5553B7CB1EEC62B1003F89B5 /* Context.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5553B7C71EEC62B1003F89B5 /* Context.cpp */; };
 		5553B7CC1EEC62B1003F89B5 /* Device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5553B7C81EEC62B1003F89B5 /* Device.cpp */; };
@@ -305,6 +324,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 3DC5F8461BDA24FE005DA404;
 			remoteInfo = Play;
+		};
+		553A882A26B119420033A909 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 553A881F26B119100033A909;
+			remoteInfo = "chdr-play";
 		};
 		94E1B94218D0F6F7003ACCFF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -878,6 +904,49 @@
 		55352629218E3783006A4AED /* HttpClientFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpClientFactory.h; sourceTree = "<group>"; };
 		5535262C218E3783006A4AED /* AppleHttpClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppleHttpClient.h; sourceTree = "<group>"; };
 		5535262E218E3783006A4AED /* HttpClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpClient.h; sourceTree = "<group>"; };
+		553A876726B118870033A909 /* flac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flac.h; sourceTree = "<group>"; };
+		553A876826B118870033A909 /* chdconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chdconfig.h; sourceTree = "<group>"; };
+		553A876926B118870033A909 /* bitstream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bitstream.h; sourceTree = "<group>"; };
+		553A876A26B118870033A909 /* cdrom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cdrom.h; sourceTree = "<group>"; };
+		553A876B26B118870033A909 /* chd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chd.h; sourceTree = "<group>"; };
+		553A876C26B118870033A909 /* huffman.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = huffman.h; sourceTree = "<group>"; };
+		553A876D26B118870033A909 /* coretypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = coretypes.h; sourceTree = "<group>"; };
+		553A876F26B118870033A909 /* dr_flac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dr_flac.h; sourceTree = "<group>"; };
+		553A87CB26B118870033A909 /* libchdr_chd.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = libchdr_chd.c; sourceTree = "<group>"; };
+		553A87CC26B118870033A909 /* libchdr_bitstream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = libchdr_bitstream.c; sourceTree = "<group>"; };
+		553A87CD26B118870033A909 /* libchdr_huffman.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = libchdr_huffman.c; sourceTree = "<group>"; };
+		553A87CE26B118870033A909 /* libchdr_file.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = libchdr_file.c; sourceTree = "<group>"; };
+		553A87CF26B118870033A909 /* libchdr_flac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = libchdr_flac.c; sourceTree = "<group>"; };
+		553A87D126B118870033A909 /* libchdr_cdrom.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = libchdr_cdrom.c; sourceTree = "<group>"; };
+		553A882026B119100033A909 /* libchdr-play.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libchdr-play.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		553A882D26B119D50033A909 /* ChdImageStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ChdImageStream.cpp; sourceTree = "<group>"; };
+		553A882E26B119D50033A909 /* ChdImageStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChdImageStream.h; sourceTree = "<group>"; };
+		553A882F26B119D50033A909 /* ChdStreamSupport.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ChdStreamSupport.cpp; sourceTree = "<group>"; };
+		553A883026B119D50033A909 /* ChdStreamSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChdStreamSupport.h; sourceTree = "<group>"; };
+		553A886C26B11A430033A909 /* LzHash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LzHash.h; sourceTree = "<group>"; };
+		553A886D26B11A430033A909 /* 7zTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 7zTypes.h; sourceTree = "<group>"; };
+		553A886E26B11A430033A909 /* Compiler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Compiler.h; sourceTree = "<group>"; };
+		553A886F26B11A430033A909 /* Precomp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Precomp.h; sourceTree = "<group>"; };
+		553A887026B11A430033A909 /* CpuArch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CpuArch.h; sourceTree = "<group>"; };
+		553A887126B11A430033A909 /* Delta.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Delta.h; sourceTree = "<group>"; };
+		553A887226B11A430033A909 /* LzmaLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LzmaLib.h; sourceTree = "<group>"; };
+		553A887326B11A430033A909 /* Lzma86.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lzma86.h; sourceTree = "<group>"; };
+		553A887426B11A430033A909 /* LzmaEnc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LzmaEnc.h; sourceTree = "<group>"; };
+		553A887526B11A430033A909 /* LzFind.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LzFind.h; sourceTree = "<group>"; };
+		553A887626B11A430033A909 /* Bra.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bra.h; sourceTree = "<group>"; };
+		553A887726B11A430033A909 /* Sort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sort.h; sourceTree = "<group>"; };
+		553A887826B11A430033A909 /* LzmaDec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LzmaDec.h; sourceTree = "<group>"; };
+		553A887926B11A430033A909 /* Alloc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Alloc.h; sourceTree = "<group>"; };
+		553A887E26B11A430033A909 /* LzmaEnc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = LzmaEnc.c; sourceTree = "<group>"; };
+		553A887F26B11A430033A909 /* LzFind.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = LzFind.c; sourceTree = "<group>"; };
+		553A888026B11A430033A909 /* Sort.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Sort.c; sourceTree = "<group>"; };
+		553A888126B11A430033A909 /* Bra86.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Bra86.c; sourceTree = "<group>"; };
+		553A888226B11A430033A909 /* Alloc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Alloc.c; sourceTree = "<group>"; };
+		553A888326B11A430033A909 /* LzmaDec.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = LzmaDec.c; sourceTree = "<group>"; };
+		553A888426B11A430033A909 /* BraIA64.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = BraIA64.c; sourceTree = "<group>"; };
+		553A888526B11A430033A909 /* Lzma86Dec.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Lzma86Dec.c; sourceTree = "<group>"; };
+		553A888626B11A430033A909 /* Delta.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Delta.c; sourceTree = "<group>"; };
+		553A888726B11A430033A909 /* CpuArch.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = CpuArch.c; sourceTree = "<group>"; };
 		55453725266836170097DD71 /* static_loop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = static_loop.h; sourceTree = "<group>"; };
 		554A1BFC2644F39B009FE60D /* GsSpriteRegion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GsSpriteRegion.h; sourceTree = "<group>"; };
 		554A1BFD2644F39B009FE60D /* GsTextureCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GsTextureCache.h; sourceTree = "<group>"; };
@@ -971,10 +1040,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		553A881E26B119100033A909 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D5B49B3048680CD000E48DA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				553A882C26B1194B0033A909 /* libchdr-play.a in Frameworks */,
 				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
 				3DA64E5A1BDE06E8003DBE72 /* libbz2.tbd in Frameworks */,
 				3D208E981182550400BEAA42 /* OpenGL.framework in Frameworks */,
@@ -1064,6 +1141,7 @@
 				94E1B8FD18D0F61F003ACCFF /* libCodeGen.a */,
 				3DC5F8451BDA24F6005DA404 /* libFramework.a */,
 				3DC5F8561BDA24FE005DA404 /* libPlay.a */,
+				553A882026B119100033A909 /* libchdr-play.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1884,6 +1962,7 @@
 		551E47942553645D00AA6B38 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				553A876226B118870033A909 /* libchdr */,
 				551E47A92553654400AA6B38 /* ghc */,
 			);
 			name = Dependencies;
@@ -1924,6 +2003,10 @@
 		551E4814255368A400AA6B38 /* discimages */ = {
 			isa = PBXGroup;
 			children = (
+				553A882D26B119D50033A909 /* ChdImageStream.cpp */,
+				553A882E26B119D50033A909 /* ChdImageStream.h */,
+				553A882F26B119D50033A909 /* ChdStreamSupport.cpp */,
+				553A883026B119D50033A909 /* ChdStreamSupport.h */,
 				551E4815255368A400AA6B38 /* CsoImageStream.cpp */,
 				551E4819255368A400AA6B38 /* CsoImageStream.h */,
 				551E4818255368A400AA6B38 /* CueSheet.cpp */,
@@ -1972,6 +2055,116 @@
 				55352629218E3783006A4AED /* HttpClientFactory.h */,
 			);
 			path = http;
+			sourceTree = "<group>";
+		};
+		553A876226B118870033A909 /* libchdr */ = {
+			isa = PBXGroup;
+			children = (
+				553A883326B11A430033A909 /* deps */,
+				553A876526B118870033A909 /* include */,
+				553A87CA26B118870033A909 /* src */,
+			);
+			name = libchdr;
+			path = Play/deps/libchdr;
+			sourceTree = SOURCE_ROOT;
+		};
+		553A876526B118870033A909 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				553A876626B118870033A909 /* libchdr */,
+				553A876E26B118870033A909 /* dr_libs */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		553A876626B118870033A909 /* libchdr */ = {
+			isa = PBXGroup;
+			children = (
+				553A876926B118870033A909 /* bitstream.h */,
+				553A876A26B118870033A909 /* cdrom.h */,
+				553A876B26B118870033A909 /* chd.h */,
+				553A876826B118870033A909 /* chdconfig.h */,
+				553A876D26B118870033A909 /* coretypes.h */,
+				553A876726B118870033A909 /* flac.h */,
+				553A876C26B118870033A909 /* huffman.h */,
+			);
+			path = libchdr;
+			sourceTree = "<group>";
+		};
+		553A876E26B118870033A909 /* dr_libs */ = {
+			isa = PBXGroup;
+			children = (
+				553A876F26B118870033A909 /* dr_flac.h */,
+			);
+			path = dr_libs;
+			sourceTree = "<group>";
+		};
+		553A87CA26B118870033A909 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				553A87CC26B118870033A909 /* libchdr_bitstream.c */,
+				553A87D126B118870033A909 /* libchdr_cdrom.c */,
+				553A87CB26B118870033A909 /* libchdr_chd.c */,
+				553A87CE26B118870033A909 /* libchdr_file.c */,
+				553A87CF26B118870033A909 /* libchdr_flac.c */,
+				553A87CD26B118870033A909 /* libchdr_huffman.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		553A883326B11A430033A909 /* deps */ = {
+			isa = PBXGroup;
+			children = (
+				553A886726B11A430033A909 /* lzma-19.00 */,
+			);
+			path = deps;
+			sourceTree = "<group>";
+		};
+		553A886726B11A430033A909 /* lzma-19.00 */ = {
+			isa = PBXGroup;
+			children = (
+				553A886B26B11A430033A909 /* include */,
+				553A887D26B11A430033A909 /* src */,
+			);
+			path = "lzma-19.00";
+			sourceTree = "<group>";
+		};
+		553A886B26B11A430033A909 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				553A886D26B11A430033A909 /* 7zTypes.h */,
+				553A887926B11A430033A909 /* Alloc.h */,
+				553A887626B11A430033A909 /* Bra.h */,
+				553A886E26B11A430033A909 /* Compiler.h */,
+				553A887026B11A430033A909 /* CpuArch.h */,
+				553A887126B11A430033A909 /* Delta.h */,
+				553A887526B11A430033A909 /* LzFind.h */,
+				553A886C26B11A430033A909 /* LzHash.h */,
+				553A887326B11A430033A909 /* Lzma86.h */,
+				553A887826B11A430033A909 /* LzmaDec.h */,
+				553A887426B11A430033A909 /* LzmaEnc.h */,
+				553A887226B11A430033A909 /* LzmaLib.h */,
+				553A886F26B11A430033A909 /* Precomp.h */,
+				553A887726B11A430033A909 /* Sort.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		553A887D26B11A430033A909 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				553A888226B11A430033A909 /* Alloc.c */,
+				553A888126B11A430033A909 /* Bra86.c */,
+				553A888426B11A430033A909 /* BraIA64.c */,
+				553A888726B11A430033A909 /* CpuArch.c */,
+				553A888626B11A430033A909 /* Delta.c */,
+				553A887F26B11A430033A909 /* LzFind.c */,
+				553A888526B11A430033A909 /* Lzma86Dec.c */,
+				553A888326B11A430033A909 /* LzmaDec.c */,
+				553A887E26B11A430033A909 /* LzmaEnc.c */,
+				553A888026B11A430033A909 /* Sort.c */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 		5553B7C51EEC62B1003F89B5 /* openal */ = {
@@ -2043,6 +2236,16 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		553A881C26B119100033A909 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		3DC5F8351BDA24F6005DA404 /* Framework */ = {
 			isa = PBXNativeTarget;
@@ -2076,6 +2279,23 @@
 			productReference = 3DC5F8561BDA24FE005DA404 /* libPlay.a */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
+		553A881F26B119100033A909 /* chdr-play */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 553A882126B119100033A909 /* Build configuration list for PBXNativeTarget "chdr-play" */;
+			buildPhases = (
+				553A881C26B119100033A909 /* Headers */,
+				553A881D26B119100033A909 /* Sources */,
+				553A881E26B119100033A909 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "chdr-play";
+			productName = "chdr-play";
+			productReference = 553A882026B119100033A909 /* libchdr-play.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		8D5B49AC048680CD000E48DA /* Play! */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "Play!" */;
@@ -2088,6 +2308,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				553A882B26B119420033A909 /* PBXTargetDependency */,
 				3DC5FD391BDB7EDE005DA404 /* PBXTargetDependency */,
 				3DC5FD3B1BDB7EDE005DA404 /* PBXTargetDependency */,
 				94E1B94318D0F6F7003ACCFF /* PBXTargetDependency */,
@@ -2121,6 +2342,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					553A881F26B119100033A909 = {
+						CreatedOnToolsVersion = 12.5.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "Play!" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -2139,6 +2366,7 @@
 				94E1B8EA18D0F61F003ACCFF /* CodeGen */,
 				3DC5F8351BDA24F6005DA404 /* Framework */,
 				3DC5F8461BDA24FE005DA404 /* Play */,
+				553A881F26B119100033A909 /* chdr-play */,
 			);
 		};
 /* End PBXProject section */
@@ -2408,10 +2636,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		553A881D26B119100033A909 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				553A882926B119370033A909 /* libchdr_chd.c in Sources */,
+				553A889026B11A680033A909 /* LzFind.c in Sources */,
+				553A882826B119370033A909 /* libchdr_bitstream.c in Sources */,
+				553A889126B11A680033A909 /* Alloc.c in Sources */,
+				553A888A26B11A680033A909 /* LzmaDec.c in Sources */,
+				553A882626B119370033A909 /* libchdr_cdrom.c in Sources */,
+				553A888F26B11A680033A909 /* LzmaEnc.c in Sources */,
+				553A888E26B11A680033A909 /* Delta.c in Sources */,
+				553A888C26B11A680033A909 /* CpuArch.c in Sources */,
+				553A888926B11A680033A909 /* BraIA64.c in Sources */,
+				553A882526B119370033A909 /* libchdr_huffman.c in Sources */,
+				553A888D26B11A680033A909 /* Sort.c in Sources */,
+				553A888B26B11A680033A909 /* Lzma86Dec.c in Sources */,
+				553A888826B11A680033A909 /* Bra86.c in Sources */,
+				553A882726B119370033A909 /* libchdr_file.c in Sources */,
+				553A882426B119370033A909 /* libchdr_flac.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D5B49B1048680CD000E48DA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				553A883126B119D50033A909 /* ChdImageStream.cpp in Sources */,
+				553A883226B119D50033A909 /* ChdStreamSupport.cpp in Sources */,
 				5517104D25D9DFB6008D5D96 /* PathUtils.mm in Sources */,
 				3DC5F8591BDB6D54005DA404 /* PureiGameCore.mm in Sources */,
 			);
@@ -2471,6 +2724,11 @@
 			target = 3DC5F8461BDA24FE005DA404 /* Play */;
 			targetProxy = 3DC5FD3A1BDB7EDE005DA404 /* PBXContainerItemProxy */;
 		};
+		553A882B26B119420033A909 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 553A881F26B119100033A909 /* chdr-play */;
+			targetProxy = 553A882A26B119420033A909 /* PBXContainerItemProxy */;
+		};
 		94E1B94318D0F6F7003ACCFF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 94E1B8EA18D0F61F003ACCFF /* CodeGen */;
@@ -2486,6 +2744,14 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				HEADER_SEARCH_PATHS = (
+					Play/Source,
+					Play/deps/Framework/include,
+					Play/deps/CodeGen/include,
+					extern/include,
+					Play/deps/Dependencies/ghc_filesystem/include,
+					Play/deps/libchdr/include,
+				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "\"$(USER_LIBRARY_DIR)/Application Support/OpenEmu/Cores\"";
 				LD_RUNPATH_SEARCH_PATHS = "\"~/Library/Graphics/Quartz Composer Plug-Ins/OpenEmuQC.plugin/Contents/Frameworks/\" \"/Library/Graphics/Quartz Composer Plug-Ins/OpenEmuQC.plugin/Contents/Frameworks/\" ~/Library/Frameworks /Library/Frameworks @loader_path/../Frameworks";
@@ -2516,6 +2782,14 @@
 				DEAD_CODE_STRIPPING = YES;
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_OPTIMIZATION_LEVEL = 3;
+				HEADER_SEARCH_PATHS = (
+					Play/Source,
+					Play/deps/Framework/include,
+					Play/deps/CodeGen/include,
+					extern/include,
+					Play/deps/Dependencies/ghc_filesystem/include,
+					Play/deps/libchdr/include,
+				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "\"$(USER_LIBRARY_DIR)/Application Support/OpenEmu/Cores\"";
 				LD_RUNPATH_SEARCH_PATHS = "\"~/Library/Graphics/Quartz Composer Plug-Ins/OpenEmuQC.plugin/Contents/Frameworks/\" \"/Library/Graphics/Quartz Composer Plug-Ins/OpenEmuQC.plugin/Contents/Frameworks/\" ~/Library/Frameworks /Library/Frameworks @loader_path/../Frameworks";
@@ -2769,6 +3043,96 @@
 			};
 			name = Release;
 		};
+		553A882226B119100033A909 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_7ZIP_ST,
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Play/deps/libchdr/include\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		553A882326B119100033A909 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_NS_ASSERTIONS = NO;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_7ZIP_ST,
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Play/deps/libchdr/include\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		94E1B8FB18D0F61F003ACCFF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2853,6 +3217,15 @@
 			buildConfigurations = (
 				3DC5F8541BDA24FE005DA404 /* Debug */,
 				3DC5F8551BDA24FE005DA404 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		553A882126B119100033A909 /* Build configuration list for PBXNativeTarget "chdr-play" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				553A882226B119100033A909 /* Debug */,
+				553A882326B119100033A909 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
