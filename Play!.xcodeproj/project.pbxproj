@@ -1962,8 +1962,8 @@
 		551E47942553645D00AA6B38 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				553A876226B118870033A909 /* libchdr */,
 				551E47A92553654400AA6B38 /* ghc */,
+				553A876226B118870033A909 /* libchdr */,
 			);
 			name = Dependencies;
 			path = Play/deps/Dependencies;
@@ -2745,12 +2745,8 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				HEADER_SEARCH_PATHS = (
-					Play/Source,
-					Play/deps/Framework/include,
-					Play/deps/CodeGen/include,
-					extern/include,
-					Play/deps/Dependencies/ghc_filesystem/include,
-					Play/deps/libchdr/include,
+					"$(inherited)",
+					"\"$(SRCROOT)/Play/deps/libchdr/include\"",
 				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "\"$(USER_LIBRARY_DIR)/Application Support/OpenEmu/Cores\"";
@@ -2783,12 +2779,8 @@
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_OPTIMIZATION_LEVEL = 3;
 				HEADER_SEARCH_PATHS = (
-					Play/Source,
-					Play/deps/Framework/include,
-					Play/deps/CodeGen/include,
-					extern/include,
-					Play/deps/Dependencies/ghc_filesystem/include,
-					Play/deps/libchdr/include,
+					"$(inherited)",
+					"\"$(SRCROOT)/Play/deps/libchdr/include\"",
 				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "\"$(USER_LIBRARY_DIR)/Application Support/OpenEmu/Cores\"";
@@ -2854,11 +2846,11 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					Play/Source,
-					Play/deps/Framework/include,
-					Play/deps/CodeGen/include,
-					extern/include,
-					Play/deps/Dependencies/ghc_filesystem/include,
+					"\"$(SRCROOT)/Play/Source\"",
+					"\"$(SRCROOT)/Play/deps/Framework/include\"",
+					"\"$(SRCROOT)/Play/deps/CodeGen/include\"",
+					"\"$(SRCROOT)/extern/include\"",
+					"\"$(SRCROOT)/Play/deps/Dependencies/ghc_filesystem/include\"",
 				);
 				LIBRARY_SEARCH_PATHS = extern/lib;
 				LLVM_LTO = NO;
@@ -2916,11 +2908,11 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					Play/Source,
-					Play/deps/Framework/include,
-					Play/deps/CodeGen/include,
-					extern/include,
-					Play/deps/Dependencies/ghc_filesystem/include,
+					"\"$(SRCROOT)/Play/Source\"",
+					"\"$(SRCROOT)/Play/deps/Framework/include\"",
+					"\"$(SRCROOT)/Play/deps/CodeGen/include\"",
+					"\"$(SRCROOT)/extern/include\"",
+					"\"$(SRCROOT)/Play/deps/Dependencies/ghc_filesystem/include\"",
 				);
 				LIBRARY_SEARCH_PATHS = extern/lib;
 				LLVM_LTO = YES;
