@@ -293,6 +293,7 @@
 		5553B7E41EEC6A54003F89B5 /* CoffObjectFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5553B7E31EEC6A54003F89B5 /* CoffObjectFile.cpp */; };
 		5553B7E61EEC6A72003F89B5 /* ObjectFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5553B7E51EEC6A72003F89B5 /* ObjectFile.cpp */; };
 		555DFAAB21EBBBC6001D24BC /* FpUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 555DFAA921EBBBC5001D24BC /* FpUtils.cpp */; };
+		555F368B26B34DEE00B71754 /* Iop_Naplink.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 555F368926B34DEE00B71754 /* Iop_Naplink.cpp */; };
 		557239271E47067B00AF40D3 /* Iop_MtapMan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 557239251E47067B00AF40D3 /* Iop_MtapMan.cpp */; };
 		5572392A1E47075000AF40D3 /* Iop_Module.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 557239281E47075000AF40D3 /* Iop_Module.cpp */; };
 		5572392D1E47083000AF40D3 /* Iop_Heaplib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5572392B1E47083000AF40D3 /* Iop_Heaplib.cpp */; };
@@ -974,6 +975,8 @@
 		5553B7E51EEC6A72003F89B5 /* ObjectFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ObjectFile.cpp; sourceTree = "<group>"; };
 		555DFAA921EBBBC5001D24BC /* FpUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FpUtils.cpp; sourceTree = "<group>"; };
 		555DFAAA21EBBBC6001D24BC /* FpUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FpUtils.h; sourceTree = "<group>"; };
+		555F368926B34DEE00B71754 /* Iop_Naplink.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Iop_Naplink.cpp; sourceTree = "<group>"; };
+		555F368A26B34DEE00B71754 /* Iop_Naplink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Iop_Naplink.h; sourceTree = "<group>"; };
 		557239251E47067B00AF40D3 /* Iop_MtapMan.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Iop_MtapMan.cpp; sourceTree = "<group>"; };
 		557239261E47067B00AF40D3 /* Iop_MtapMan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Iop_MtapMan.h; sourceTree = "<group>"; };
 		557239281E47075000AF40D3 /* Iop_Module.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Iop_Module.cpp; sourceTree = "<group>"; };
@@ -1574,6 +1577,8 @@
 				557239291E47075000AF40D3 /* Iop_Module.h */,
 				557239251E47067B00AF40D3 /* Iop_MtapMan.cpp */,
 				557239261E47067B00AF40D3 /* Iop_MtapMan.h */,
+				555F368926B34DEE00B71754 /* Iop_Naplink.cpp */,
+				555F368A26B34DEE00B71754 /* Iop_Naplink.h */,
 				3DC5FA8C1BDB7811005DA404 /* Iop_PadMan.cpp */,
 				3DC5FA8D1BDB7811005DA404 /* Iop_PadMan.h */,
 				551E488B25536C8E00AA6B38 /* Iop_PathUtils.cpp */,
@@ -2666,6 +2671,7 @@
 				553A883126B119D50033A909 /* ChdImageStream.cpp in Sources */,
 				553A883226B119D50033A909 /* ChdStreamSupport.cpp in Sources */,
 				5517104D25D9DFB6008D5D96 /* PathUtils.mm in Sources */,
+				555F368B26B34DEE00B71754 /* Iop_Naplink.cpp in Sources */,
 				3DC5F8591BDB6D54005DA404 /* PureiGameCore.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
