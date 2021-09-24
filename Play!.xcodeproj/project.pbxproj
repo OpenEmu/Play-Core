@@ -117,7 +117,7 @@
 		3DC5FC4C1BDB7811005DA404 /* PS2OS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5FA3A1BDB7811005DA404 /* PS2OS.cpp */; };
 		3DC5FC4D1BDB7811005DA404 /* SIF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5FA3C1BDB7811005DA404 /* SIF.cpp */; };
 		3DC5FC4E1BDB7811005DA404 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5FA3E1BDB7811005DA404 /* Timer.cpp */; };
-		3DC5FC4F1BDB7811005DA404 /* Vif.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5FA401BDB7811005DA404 /* Vif.cpp */; };
+		3DC5FC4F1BDB7811005DA404 /* Vif.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5FA401BDB7811005DA404 /* Vif.cpp */; settings = {COMPILER_FLAGS = "-fbracket-depth=512"; }; };
 		3DC5FC501BDB7811005DA404 /* Vif1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5FA421BDB7811005DA404 /* Vif1.cpp */; };
 		3DC5FC511BDB7811005DA404 /* Vpu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5FA441BDB7811005DA404 /* Vpu.cpp */; };
 		3DC5FC521BDB7811005DA404 /* VuAnalysis.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5FA461BDB7811005DA404 /* VuAnalysis.cpp */; };
