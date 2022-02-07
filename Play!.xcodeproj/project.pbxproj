@@ -298,6 +298,8 @@
 		5572392A1E47075000AF40D3 /* Iop_Module.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 557239281E47075000AF40D3 /* Iop_Module.cpp */; };
 		5572392D1E47083000AF40D3 /* Iop_Heaplib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5572392B1E47083000AF40D3 /* Iop_Heaplib.cpp */; };
 		557239301E47091F00AF40D3 /* Iop_Thvpool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5572392E1E47091F00AF40D3 /* Iop_Thvpool.cpp */; };
+		5591D7FA27B0C2480073E97D /* EeBasicBlock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5591D7F727B0C23F0073E97D /* EeBasicBlock.cpp */; };
+		5591D7FD27B0C2980073E97D /* Ee_IdleEvaluator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5591D7FC27B0C2980073E97D /* Ee_IdleEvaluator.cpp */; };
 		55A4831D25F99EAF00E6ADE3 /* Iop_Dev9.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55A4831A25F99EAE00E6ADE3 /* Iop_Dev9.cpp */; };
 		55A4831E25F99EAF00E6ADE3 /* Iop_Speed.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55A4831C25F99EAE00E6ADE3 /* Iop_Speed.cpp */; };
 		55E0F8DF25E9AF52008A560D /* FrameLimiter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55E0F8DE25E9AF52008A560D /* FrameLimiter.cpp */; };
@@ -985,6 +987,10 @@
 		5572392C1E47083000AF40D3 /* Iop_Heaplib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Iop_Heaplib.h; sourceTree = "<group>"; };
 		5572392E1E47091F00AF40D3 /* Iop_Thvpool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Iop_Thvpool.cpp; sourceTree = "<group>"; };
 		5572392F1E47091F00AF40D3 /* Iop_Thvpool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Iop_Thvpool.h; sourceTree = "<group>"; };
+		5591D7F727B0C23F0073E97D /* EeBasicBlock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EeBasicBlock.cpp; sourceTree = "<group>"; };
+		5591D7F827B0C23F0073E97D /* EeBasicBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EeBasicBlock.h; sourceTree = "<group>"; };
+		5591D7FB27B0C2980073E97D /* Ee_IdleEvaluator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ee_IdleEvaluator.h; sourceTree = "<group>"; };
+		5591D7FC27B0C2980073E97D /* Ee_IdleEvaluator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ee_IdleEvaluator.cpp; sourceTree = "<group>"; };
 		55A4831925F99EAE00E6ADE3 /* Iop_Speed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Iop_Speed.h; sourceTree = "<group>"; };
 		55A4831A25F99EAE00E6ADE3 /* Iop_Dev9.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Iop_Dev9.cpp; sourceTree = "<group>"; };
 		55A4831B25F99EAE00E6ADE3 /* Iop_Dev9.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Iop_Dev9.h; sourceTree = "<group>"; };
@@ -1431,12 +1437,16 @@
 				3DC5FA141BDB7811005DA404 /* Dmac_Channel.h */,
 				3DC5FA111BDB7811005DA404 /* DMAC.cpp */,
 				3DC5FA121BDB7811005DA404 /* DMAC.h */,
+				5591D7FC27B0C2980073E97D /* Ee_IdleEvaluator.cpp */,
+				5591D7FB27B0C2980073E97D /* Ee_IdleEvaluator.h */,
 				551E48272553690D00AA6B38 /* Ee_LibMc2.cpp */,
 				551E48282553690D00AA6B38 /* Ee_LibMc2.h */,
 				3DC5FA151BDB7811005DA404 /* Ee_SubSystem.cpp */,
 				3DC5FA161BDB7811005DA404 /* Ee_SubSystem.h */,
 				3DC5FA171BDB7811005DA404 /* EEAssembler.cpp */,
 				3DC5FA181BDB7811005DA404 /* EEAssembler.h */,
+				5591D7F727B0C23F0073E97D /* EeBasicBlock.cpp */,
+				5591D7F827B0C23F0073E97D /* EeBasicBlock.h */,
 				3DC5FA191BDB7811005DA404 /* EeExecutor.cpp */,
 				3DC5FA1A1BDB7811005DA404 /* EeExecutor.h */,
 				3DC5FA1B1BDB7811005DA404 /* FpAddTruncate.cpp */,
@@ -2567,6 +2577,8 @@
 				3DC5FC991BDB7811005DA404 /* MemoryUtils.cpp in Sources */,
 				3DC5FC301BDB7811005DA404 /* COP_SCU_Reflection.cpp in Sources */,
 				555DFAAB21EBBBC6001D24BC /* FpUtils.cpp in Sources */,
+				5591D7FD27B0C2980073E97D /* Ee_IdleEvaluator.cpp in Sources */,
+				5591D7FA27B0C2480073E97D /* EeBasicBlock.cpp in Sources */,
 				3DC5FCA01BDB7811005DA404 /* MipsFunctionPatternDb.cpp in Sources */,
 				3DC5FC7D1BDB7811005DA404 /* Iop_Spu2_Core.cpp in Sources */,
 				3DC5FCAF1BDB7811005DA404 /* SaveExporter.cpp in Sources */,
