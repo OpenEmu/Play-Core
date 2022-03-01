@@ -302,6 +302,9 @@
 		5591D7FD27B0C2980073E97D /* Ee_IdleEvaluator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5591D7FC27B0C2980073E97D /* Ee_IdleEvaluator.cpp */; };
 		55A4831D25F99EAF00E6ADE3 /* Iop_Dev9.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55A4831A25F99EAE00E6ADE3 /* Iop_Dev9.cpp */; };
 		55A4831E25F99EAF00E6ADE3 /* Iop_Speed.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55A4831C25F99EAE00E6ADE3 /* Iop_Speed.cpp */; };
+		55AB170F27CD9AF200DF83BE /* Iop_IomanX.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55AB170E27CD9AF200DF83BE /* Iop_IomanX.cpp */; };
+		55AB171527CD9B3700DF83BE /* PathDirectoryIterator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55AB171127CD9B3600DF83BE /* PathDirectoryIterator.cpp */; };
+		55AB171627CD9B3700DF83BE /* OpticalMediaDirectoryIterator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55AB171327CD9B3600DF83BE /* OpticalMediaDirectoryIterator.cpp */; };
 		55E0F8DF25E9AF52008A560D /* FrameLimiter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55E0F8DE25E9AF52008A560D /* FrameLimiter.cpp */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -995,6 +998,13 @@
 		55A4831A25F99EAE00E6ADE3 /* Iop_Dev9.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Iop_Dev9.cpp; sourceTree = "<group>"; };
 		55A4831B25F99EAE00E6ADE3 /* Iop_Dev9.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Iop_Dev9.h; sourceTree = "<group>"; };
 		55A4831C25F99EAE00E6ADE3 /* Iop_Speed.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Iop_Speed.cpp; sourceTree = "<group>"; };
+		55AB170D27CD9AF200DF83BE /* Iop_IomanX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Iop_IomanX.h; sourceTree = "<group>"; };
+		55AB170E27CD9AF200DF83BE /* Iop_IomanX.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Iop_IomanX.cpp; sourceTree = "<group>"; };
+		55AB171027CD9B0E00DF83BE /* Ioman_DirectoryIterator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ioman_DirectoryIterator.h; sourceTree = "<group>"; };
+		55AB171127CD9B3600DF83BE /* PathDirectoryIterator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PathDirectoryIterator.cpp; sourceTree = "<group>"; };
+		55AB171227CD9B3600DF83BE /* OpticalMediaDirectoryIterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpticalMediaDirectoryIterator.h; sourceTree = "<group>"; };
+		55AB171327CD9B3600DF83BE /* OpticalMediaDirectoryIterator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OpticalMediaDirectoryIterator.cpp; sourceTree = "<group>"; };
+		55AB171427CD9B3600DF83BE /* PathDirectoryIterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathDirectoryIterator.h; sourceTree = "<group>"; };
 		55B0F84F25536FDD000D01C9 /* GSH_VulkanPipelineCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSH_VulkanPipelineCache.h; sourceTree = "<group>"; };
 		55B0F85025536FDD000D01C9 /* GSH_VulkanDraw.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GSH_VulkanDraw.cpp; sourceTree = "<group>"; };
 		55B0F85125536FDD000D01C9 /* GSH_VulkanFrameCommandBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSH_VulkanFrameCommandBuffer.h; sourceTree = "<group>"; };
@@ -1542,6 +1552,7 @@
 				3DC5FA661BDB7811005DA404 /* ArgumentIterator.h */,
 				5517105D25D9E281008D5D96 /* ioman */,
 				3DC5FA691BDB7811005DA404 /* Ioman_Device.h */,
+				55AB171027CD9B0E00DF83BE /* Ioman_DirectoryIterator.h */,
 				551E484B25536AA100AA6B38 /* Ioman_ScopedFile.cpp */,
 				551E484A25536AA100AA6B38 /* Ioman_ScopedFile.h */,
 				3DC5FA6A1BDB7811005DA404 /* Iop_BiosBase.h */,
@@ -1575,6 +1586,8 @@
 				3DC5FA801BDB7811005DA404 /* Iop_Intrman.h */,
 				3DC5FA811BDB7811005DA404 /* Iop_Ioman.cpp */,
 				3DC5FA821BDB7811005DA404 /* Iop_Ioman.h */,
+				55AB170E27CD9AF200DF83BE /* Iop_IomanX.cpp */,
+				55AB170D27CD9AF200DF83BE /* Iop_IomanX.h */,
 				3DC5FA831BDB7811005DA404 /* Iop_LibSd.cpp */,
 				3DC5FA841BDB7811005DA404 /* Iop_LibSd.h */,
 				3DC5FA851BDB7811005DA404 /* Iop_Loadcore.cpp */,
@@ -1968,7 +1981,11 @@
 				5517105F25D9E2CE008D5D96 /* HardDiskDevice.h */,
 				5553B7D41EEC64DF003F89B5 /* OpticalMediaDevice.cpp */,
 				5553B7D51EEC64DF003F89B5 /* OpticalMediaDevice.h */,
+				55AB171327CD9B3600DF83BE /* OpticalMediaDirectoryIterator.cpp */,
+				55AB171227CD9B3600DF83BE /* OpticalMediaDirectoryIterator.h */,
 				5517106025D9E2CE008D5D96 /* PathDirectoryDevice.h */,
+				55AB171127CD9B3600DF83BE /* PathDirectoryIterator.cpp */,
+				55AB171427CD9B3600DF83BE /* PathDirectoryIterator.h */,
 				5517106125D9E2CE008D5D96 /* PreferenceDirectoryDevice.h */,
 			);
 			path = ioman;
@@ -2592,6 +2609,7 @@
 				3DC5FC7E1BDB7811005DA404 /* Iop_SpuBase.cpp in Sources */,
 				3DC5FC551BDB7811005DA404 /* VUShared.cpp in Sources */,
 				3DC5FC951BDB7811005DA404 /* MA_MIPSIV_Templates.cpp in Sources */,
+				55AB171627CD9B3700DF83BE /* OpticalMediaDirectoryIterator.cpp in Sources */,
 				3DC5FCB21BDB7811005DA404 /* XpsSaveImporter.cpp in Sources */,
 				3DC5FC671BDB7811005DA404 /* Iop_Dynamic.cpp in Sources */,
 				3DC5FC561BDB7811005DA404 /* VUShared_Reflection.cpp in Sources */,
@@ -2611,6 +2629,7 @@
 				5535260C218E3664006A4AED /* PsxBios.cpp in Sources */,
 				5517106225D9E2CE008D5D96 /* HardDiskDevice.cpp in Sources */,
 				3DC5FC2B1BDB7811005DA404 /* BasicBlock.cpp in Sources */,
+				55AB170F27CD9AF200DF83BE /* Iop_IomanX.cpp in Sources */,
 				3DC5FC9D1BDB7811005DA404 /* MIPSAssembler.cpp in Sources */,
 				3DC5FC791BDB7811005DA404 /* Iop_SifManPs2.cpp in Sources */,
 				55E0F8DF25E9AF52008A560D /* FrameLimiter.cpp in Sources */,
@@ -2625,6 +2644,7 @@
 				3DC5FC531BDB7811005DA404 /* VuBasicBlock.cpp in Sources */,
 				3DC5FCA71BDB7811005DA404 /* Posix_VolumeStream.cpp in Sources */,
 				3DC5FCA51BDB7811005DA404 /* PadHandler.cpp in Sources */,
+				55AB171527CD9B3700DF83BE /* PathDirectoryIterator.cpp in Sources */,
 				3DC5FCB11BDB7811005DA404 /* SaveImporterBase.cpp in Sources */,
 				3DC5FC941BDB7811005DA404 /* MA_MIPSIV_Reflection.cpp in Sources */,
 				3DC5FC511BDB7811005DA404 /* Vpu.cpp in Sources */,
