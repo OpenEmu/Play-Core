@@ -3465,7 +3465,6 @@
 					"-lPlay",
 					"-lFramework",
 					"-lCodeGen",
-					"-lboost_1_57_0",
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.openemu.Purei;
@@ -3505,7 +3504,6 @@
 					"-lPlay",
 					"-lFramework",
 					"-lCodeGen",
-					"-lboost_1_57_0",
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.openemu.Purei;
