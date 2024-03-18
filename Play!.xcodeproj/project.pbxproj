@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 53;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -59,7 +59,6 @@
 		3DC5F9AC1BDB7783005DA404 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5F8A91BDB7750005DA404 /* Shader.cpp */; };
 		3DC5F9AF1BDB7783005DA404 /* PtrStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5F8AC1BDB7750005DA404 /* PtrStream.cpp */; };
 		3DC5F9B01BDB7783005DA404 /* StdStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5F8AD1BDB7750005DA404 /* StdStream.cpp */; };
-		3DC5F9B11BDB7783005DA404 /* StdStreamUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5F8AE1BDB7750005DA404 /* StdStreamUtils.cpp */; };
 		3DC5F9B21BDB7783005DA404 /* Stream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5F8AF1BDB7750005DA404 /* Stream.cpp */; };
 		3DC5F9B31BDB7783005DA404 /* StreamBitStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5F8B01BDB7750005DA404 /* StreamBitStream.cpp */; };
 		3DC5F9B41BDB7783005DA404 /* string_cast.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5F8B11BDB7750005DA404 /* string_cast.cpp */; };
@@ -197,7 +196,7 @@
 		3DC5FCA31BDB7811005DA404 /* MIPSReflection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5FAEC1BDB7811005DA404 /* MIPSReflection.cpp */; };
 		3DC5FCA41BDB7811005DA404 /* MIPSTags.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5FAEE1BDB7811005DA404 /* MIPSTags.cpp */; };
 		3DC5FCA51BDB7811005DA404 /* PadHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5FAF31BDB7811005DA404 /* PadHandler.cpp */; };
-		3DC5FCA61BDB7811005DA404 /* PadListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5FAF51BDB7811005DA404 /* PadListener.cpp */; };
+		3DC5FCA61BDB7811005DA404 /* PadInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5FAF51BDB7811005DA404 /* PadInterface.cpp */; };
 		3DC5FCA71BDB7811005DA404 /* Posix_VolumeStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5FAF71BDB7811005DA404 /* Posix_VolumeStream.cpp */; };
 		3DC5FCA81BDB7811005DA404 /* Profiler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5FAF91BDB7811005DA404 /* Profiler.cpp */; };
 		3DC5FCA91BDB7811005DA404 /* PS2VM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DC5FAFC1BDB7811005DA404 /* PS2VM.cpp */; };
@@ -229,8 +228,7 @@
 		5517106225D9E2CE008D5D96 /* HardDiskDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5517105E25D9E2CE008D5D96 /* HardDiskDevice.cpp */; };
 		551E47E52553676000AA6B38 /* RegisterStateFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 551E47DB2553676000AA6B38 /* RegisterStateFile.cpp */; };
 		551E47E62553676000AA6B38 /* XmlStateFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 551E47DC2553676000AA6B38 /* XmlStateFile.cpp */; };
-		551E47E72553676000AA6B38 /* StructFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 551E47DD2553676000AA6B38 /* StructFile.cpp */; };
-		551E47E82553676000AA6B38 /* StructCollectionStateFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 551E47E22553676000AA6B38 /* StructCollectionStateFile.cpp */; };
+		551E47E72553676000AA6B38 /* RegisterStateCollectionFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 551E47DD2553676000AA6B38 /* RegisterStateCollectionFile.cpp */; };
 		551E47E92553676000AA6B38 /* MemoryStateFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 551E47E32553676000AA6B38 /* MemoryStateFile.cpp */; };
 		551E48022553684900AA6B38 /* Jitter_CodeGen_AArch64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 551E47FC2553684900AA6B38 /* Jitter_CodeGen_AArch64.cpp */; };
 		551E48032553684900AA6B38 /* Jitter_CodeGen_AArch64_64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 551E47FD2553684900AA6B38 /* Jitter_CodeGen_AArch64_64.cpp */; };
@@ -255,6 +253,11 @@
 		551E488C25536C8E00AA6B38 /* Iop_PathUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 551E488B25536C8E00AA6B38 /* Iop_PathUtils.cpp */; };
 		551E489525536CC600AA6B38 /* Iop_Dmacman.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 551E489425536CC600AA6B38 /* Iop_Dmacman.cpp */; settings = {COMPILER_FLAGS = "-UNDEBUG"; }; };
 		551E489E25536CDF00AA6B38 /* Iop_Secrman.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 551E489C25536CDF00AA6B38 /* Iop_Secrman.cpp */; };
+		5532064C2BA8F2A60016C514 /* RegisterState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5532064A2BA8F2A60016C514 /* RegisterState.cpp */; };
+		5532065B2BA8F9120016C514 /* X86CpuFeatures.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5532065A2BA8F9120016C514 /* X86CpuFeatures.cpp */; };
+		5532065C2BA8F9770016C514 /* libCodeGen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E1B8FD18D0F61F003ACCFF /* libCodeGen.a */; };
+		5532065D2BA8F9770016C514 /* libFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC5F8451BDA24F6005DA404 /* libFramework.a */; };
+		5532065E2BA8F9770016C514 /* libPlay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC5F8561BDA24FE005DA404 /* libPlay.a */; };
 		55352607218E3551006A4AED /* HashUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55352605218E3551006A4AED /* HashUtils.cpp */; };
 		55352608218E3551006A4AED /* Csv.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55352606218E3551006A4AED /* Csv.cpp */; };
 		5535260C218E3664006A4AED /* PsxBios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5535260B218E3664006A4AED /* PsxBios.cpp */; };
@@ -520,7 +523,6 @@
 		3DC5F8AA1BDB7750005DA404 /* PathUtils.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = PathUtils.cpp; sourceTree = "<group>"; };
 		3DC5F8AC1BDB7750005DA404 /* PtrStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PtrStream.cpp; sourceTree = "<group>"; };
 		3DC5F8AD1BDB7750005DA404 /* StdStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StdStream.cpp; sourceTree = "<group>"; };
-		3DC5F8AE1BDB7750005DA404 /* StdStreamUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StdStreamUtils.cpp; sourceTree = "<group>"; };
 		3DC5F8AF1BDB7750005DA404 /* Stream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Stream.cpp; sourceTree = "<group>"; };
 		3DC5F8B01BDB7750005DA404 /* StreamBitStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StreamBitStream.cpp; sourceTree = "<group>"; };
 		3DC5F8B11BDB7750005DA404 /* string_cast.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = string_cast.cpp; sourceTree = "<group>"; };
@@ -773,8 +775,8 @@
 		3DC5FAF21BDB7811005DA404 /* OsVariableWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OsVariableWrapper.h; sourceTree = "<group>"; };
 		3DC5FAF31BDB7811005DA404 /* PadHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PadHandler.cpp; sourceTree = "<group>"; };
 		3DC5FAF41BDB7811005DA404 /* PadHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PadHandler.h; sourceTree = "<group>"; };
-		3DC5FAF51BDB7811005DA404 /* PadListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PadListener.cpp; sourceTree = "<group>"; };
-		3DC5FAF61BDB7811005DA404 /* PadListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PadListener.h; sourceTree = "<group>"; };
+		3DC5FAF51BDB7811005DA404 /* PadInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PadInterface.cpp; sourceTree = "<group>"; };
+		3DC5FAF61BDB7811005DA404 /* PadInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PadInterface.h; sourceTree = "<group>"; };
 		3DC5FAF71BDB7811005DA404 /* Posix_VolumeStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Posix_VolumeStream.cpp; sourceTree = "<group>"; };
 		3DC5FAF81BDB7811005DA404 /* Posix_VolumeStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Posix_VolumeStream.h; sourceTree = "<group>"; };
 		3DC5FAF91BDB7811005DA404 /* Profiler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Profiler.cpp; sourceTree = "<group>"; };
@@ -954,14 +956,12 @@
 		551E47AF2553654500AA6B38 /* fs_std_fwd.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fs_std_fwd.hpp; sourceTree = "<group>"; };
 		551E47DB2553676000AA6B38 /* RegisterStateFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RegisterStateFile.cpp; sourceTree = "<group>"; };
 		551E47DC2553676000AA6B38 /* XmlStateFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XmlStateFile.cpp; sourceTree = "<group>"; };
-		551E47DD2553676000AA6B38 /* StructFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StructFile.cpp; sourceTree = "<group>"; };
+		551E47DD2553676000AA6B38 /* RegisterStateCollectionFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RegisterStateCollectionFile.cpp; sourceTree = "<group>"; };
 		551E47DE2553676000AA6B38 /* MemoryStateFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryStateFile.h; sourceTree = "<group>"; };
 		551E47DF2553676000AA6B38 /* XmlStateFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlStateFile.h; sourceTree = "<group>"; };
-		551E47E02553676000AA6B38 /* StructCollectionStateFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StructCollectionStateFile.h; sourceTree = "<group>"; };
 		551E47E12553676000AA6B38 /* RegisterStateFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterStateFile.h; sourceTree = "<group>"; };
-		551E47E22553676000AA6B38 /* StructCollectionStateFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StructCollectionStateFile.cpp; sourceTree = "<group>"; };
 		551E47E32553676000AA6B38 /* MemoryStateFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MemoryStateFile.cpp; sourceTree = "<group>"; };
-		551E47E42553676000AA6B38 /* StructFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StructFile.h; sourceTree = "<group>"; };
+		551E47E42553676000AA6B38 /* RegisterStateCollectionFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterStateCollectionFile.h; sourceTree = "<group>"; };
 		551E47F6255367EA00AA6B38 /* Literal128.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Literal128.h; sourceTree = "<group>"; };
 		551E47F7255367EA00AA6B38 /* AArch32Assembler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AArch32Assembler.h; sourceTree = "<group>"; };
 		551E47F8255367EA00AA6B38 /* LiteralPool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiteralPool.h; sourceTree = "<group>"; };
@@ -1003,6 +1003,11 @@
 		551E489425536CC600AA6B38 /* Iop_Dmacman.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Iop_Dmacman.cpp; sourceTree = "<group>"; };
 		551E489C25536CDF00AA6B38 /* Iop_Secrman.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Iop_Secrman.cpp; sourceTree = "<group>"; };
 		551E489D25536CDF00AA6B38 /* Iop_Secrman.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Iop_Secrman.h; sourceTree = "<group>"; };
+		553206492BA8F2A60016C514 /* RegisterStateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterStateUtils.h; sourceTree = "<group>"; };
+		5532064A2BA8F2A60016C514 /* RegisterState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RegisterState.cpp; sourceTree = "<group>"; };
+		5532064B2BA8F2A60016C514 /* RegisterState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterState.h; sourceTree = "<group>"; };
+		553206592BA8F8F00016C514 /* X86CpuFeatures.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = X86CpuFeatures.h; sourceTree = "<group>"; };
+		5532065A2BA8F9120016C514 /* X86CpuFeatures.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = X86CpuFeatures.cpp; sourceTree = "<group>"; };
 		55352600218E3476006A4AED /* GenericMipsExecutor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenericMipsExecutor.h; sourceTree = "<group>"; };
 		55352601218E348E006A4AED /* BlockLookupOneWay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockLookupOneWay.h; sourceTree = "<group>"; };
 		55352602218E348E006A4AED /* BlockLookupTwoWay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockLookupTwoWay.h; sourceTree = "<group>"; };
@@ -1324,6 +1329,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5532065C2BA8F9770016C514 /* libCodeGen.a in Frameworks */,
+				5532065D2BA8F9770016C514 /* libFramework.a in Frameworks */,
+				5532065E2BA8F9770016C514 /* libPlay.a in Frameworks */,
 				55A14AC12990E2B900B61A60 /* libzstd-play.a in Frameworks */,
 				5584EE4D2990D508007B61B7 /* libxxhash-play.a in Frameworks */,
 				553A882C26B1194B0033A909 /* libchdr-play.a in Frameworks */,
@@ -1499,7 +1507,6 @@
 				3DC5F8AA1BDB7750005DA404 /* PathUtils.cpp */,
 				3DC5F8AC1BDB7750005DA404 /* PtrStream.cpp */,
 				3DC5F8AD1BDB7750005DA404 /* StdStream.cpp */,
-				3DC5F8AE1BDB7750005DA404 /* StdStreamUtils.cpp */,
 				3DC5F8AF1BDB7750005DA404 /* Stream.cpp */,
 				3DC5F8B01BDB7750005DA404 /* StreamBitStream.cpp */,
 				3DC5F8B21BDB7750005DA404 /* string_cast_sjis.cpp */,
@@ -1668,8 +1675,8 @@
 				3DC5FAF21BDB7811005DA404 /* OsVariableWrapper.h */,
 				3DC5FAF31BDB7811005DA404 /* PadHandler.cpp */,
 				3DC5FAF41BDB7811005DA404 /* PadHandler.h */,
-				3DC5FAF51BDB7811005DA404 /* PadListener.cpp */,
-				3DC5FAF61BDB7811005DA404 /* PadListener.h */,
+				3DC5FAF51BDB7811005DA404 /* PadInterface.cpp */,
+				3DC5FAF61BDB7811005DA404 /* PadInterface.h */,
 				5553B7DA1EEC698D003F89B5 /* Pch.cpp */,
 				5553B7DB1EEC698D003F89B5 /* Pch.h */,
 				3DC5FAF71BDB7811005DA404 /* Posix_VolumeStream.cpp */,
@@ -1994,6 +2001,7 @@
 				3DC5FD521BDB7FB1005DA404 /* MemoryFunction.h */,
 				3DC5FD531BDB7FB1005DA404 /* ObjectFile.h */,
 				3DC5FD541BDB7FB1005DA404 /* X86Assembler.h */,
+				553206592BA8F8F00016C514 /* X86CpuFeatures.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -2034,6 +2042,7 @@
 				3DC5FD731BDB7FB1005DA404 /* X86Assembler_Fpu.cpp */,
 				3DC5FD741BDB7FB1005DA404 /* X86Assembler_Sse.cpp */,
 				3DC5FD721BDB7FB1005DA404 /* X86Assembler.cpp */,
+				5532065A2BA8F9120016C514 /* X86CpuFeatures.cpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -2282,12 +2291,13 @@
 			children = (
 				551E47E32553676000AA6B38 /* MemoryStateFile.cpp */,
 				551E47DE2553676000AA6B38 /* MemoryStateFile.h */,
+				5532064A2BA8F2A60016C514 /* RegisterState.cpp */,
+				5532064B2BA8F2A60016C514 /* RegisterState.h */,
+				551E47DD2553676000AA6B38 /* RegisterStateCollectionFile.cpp */,
+				551E47E42553676000AA6B38 /* RegisterStateCollectionFile.h */,
 				551E47DB2553676000AA6B38 /* RegisterStateFile.cpp */,
 				551E47E12553676000AA6B38 /* RegisterStateFile.h */,
-				551E47E22553676000AA6B38 /* StructCollectionStateFile.cpp */,
-				551E47E02553676000AA6B38 /* StructCollectionStateFile.h */,
-				551E47DD2553676000AA6B38 /* StructFile.cpp */,
-				551E47E42553676000AA6B38 /* StructFile.h */,
+				553206492BA8F2A60016C514 /* RegisterStateUtils.h */,
 				551E47DC2553676000AA6B38 /* XmlStateFile.cpp */,
 				551E47DF2553676000AA6B38 /* XmlStateFile.h */,
 			);
@@ -2958,7 +2968,8 @@
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					553A881F26B119100033A909 = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -2974,7 +2985,7 @@
 				};
 			};
 			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "Play!" */;
-			compatibilityVersion = "Xcode 11.4";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -3071,7 +3082,6 @@
 				5553B7CB1EEC62B1003F89B5 /* Context.cpp in Sources */,
 				3DC5F9AF1BDB7783005DA404 /* PtrStream.cpp in Sources */,
 				3DC5F9B01BDB7783005DA404 /* StdStream.cpp in Sources */,
-				3DC5F9B11BDB7783005DA404 /* StdStreamUtils.cpp in Sources */,
 				55352607218E3551006A4AED /* HashUtils.cpp in Sources */,
 				3DC5F9B21BDB7783005DA404 /* Stream.cpp in Sources */,
 				3DC5F9B31BDB7783005DA404 /* StreamBitStream.cpp in Sources */,
@@ -3134,7 +3144,7 @@
 				3DC5FC3C1BDB7811005DA404 /* GIF.cpp in Sources */,
 				551E489525536CC600AA6B38 /* Iop_Dmacman.cpp in Sources */,
 				3DC5FC881BDB7811005DA404 /* Iop_Vblank.cpp in Sources */,
-				3DC5FCA61BDB7811005DA404 /* PadListener.cpp in Sources */,
+				3DC5FCA61BDB7811005DA404 /* PadInterface.cpp in Sources */,
 				551E481F255368A400AA6B38 /* MdsDiscImage.cpp in Sources */,
 				3DC5FC681BDB7811005DA404 /* Iop_FileIo.cpp in Sources */,
 				3DC5FC731BDB7811005DA404 /* Iop_PadMan.cpp in Sources */,
@@ -3153,7 +3163,7 @@
 				3DC5FC871BDB7811005DA404 /* Iop_Timrman.cpp in Sources */,
 				3DC5FC341BDB7811005DA404 /* COP_VU_Reflection.cpp in Sources */,
 				3DC5FCA11BDB7811005DA404 /* MIPSInstructionFactory.cpp in Sources */,
-				551E47E72553676000AA6B38 /* StructFile.cpp in Sources */,
+				551E47E72553676000AA6B38 /* RegisterStateCollectionFile.cpp in Sources */,
 				3DC5FC401BDB7811005DA404 /* IPU_MacroblockAddressIncrementTable.cpp in Sources */,
 				3DC5FC9C1BDB7811005DA404 /* MIPSArchitecture.cpp in Sources */,
 				3DC5FC761BDB7811005DA404 /* Iop_SifDynamic.cpp in Sources */,
@@ -3183,6 +3193,7 @@
 				3DC5FC451BDB7811005DA404 /* MA_EE.cpp in Sources */,
 				3DC5FC631BDB7811005DA404 /* Iop_Cdvdfsv.cpp in Sources */,
 				3DC5FCAE1BDB7811005DA404 /* Save.cpp in Sources */,
+				5532064C2BA8F2A60016C514 /* RegisterState.cpp in Sources */,
 				3DC5FC391BDB7811005DA404 /* EeExecutor.cpp in Sources */,
 				3DC5FC991BDB7811005DA404 /* MemoryUtils.cpp in Sources */,
 				3DC5FC301BDB7811005DA404 /* COP_SCU_Reflection.cpp in Sources */,
@@ -3249,7 +3260,6 @@
 				551E484325536A7C00AA6B38 /* Iop_FileIoHandler2200.cpp in Sources */,
 				3DC5FC321BDB7811005DA404 /* DiskUtils.cpp in Sources */,
 				3DC5FC9B1BDB7811005DA404 /* MIPSAnalysis.cpp in Sources */,
-				551E47E82553676000AA6B38 /* StructCollectionStateFile.cpp in Sources */,
 				3DC5FCA91BDB7811005DA404 /* PS2VM.cpp in Sources */,
 				3DC5FC521BDB7811005DA404 /* VuAnalysis.cpp in Sources */,
 				5553B7D61EEC64DF003F89B5 /* OpticalMediaDevice.cpp in Sources */,
@@ -3365,6 +3375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5532065B2BA8F9120016C514 /* X86CpuFeatures.cpp in Sources */,
 				3DC5FD861BDB7FB1005DA404 /* Jitter_RegAlloc.cpp in Sources */,
 				3DC5FD7F1BDB7FB1005DA404 /* Jitter_CodeGen_x86.cpp in Sources */,
 				3DC5FD781BDB7FB1005DA404 /* Jitter.cpp in Sources */,
@@ -3444,6 +3455,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = YES;
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3459,14 +3471,6 @@
 					"@loader_path/../Frameworks",
 				);
 				MARKETING_VERSION = 2.5;
-				OTHER_LDFLAGS = (
-					"-x",
-					"objective-c++",
-					"-lPlay",
-					"-lFramework",
-					"-lCodeGen",
-					"-lc++",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.openemu.Purei;
 				PRODUCT_NAME = "Play!";
 				SKIP_INSTALL = YES;
@@ -3498,14 +3502,6 @@
 					"@loader_path/../Frameworks",
 				);
 				MARKETING_VERSION = 2.5;
-				OTHER_LDFLAGS = (
-					"-x",
-					"objective-c++",
-					"-lPlay",
-					"-lFramework",
-					"-lCodeGen",
-					"-lc++",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.openemu.Purei;
 				PRODUCT_NAME = "Play!";
 				SKIP_INSTALL = YES;
@@ -3521,31 +3517,39 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = NO;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEAD_CODE_STRIPPING = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = NO;
+				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -3573,9 +3577,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = extern/lib;
 				LLVM_LTO = NO;
-				MACOSX_DEPLOYMENT_TARGET = 10.14.4;
-				"MACOSX_DEPLOYMENT_TARGET[arch=arm64]" = 11.0;
-				"MACOSX_DEPLOYMENT_TARGET[arch=arm64e]" = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "";
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
@@ -3591,31 +3593,39 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = NO;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEAD_CODE_STRIPPING = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = NO;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
@@ -3643,9 +3653,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = extern/lib;
 				LLVM_LTO = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14.4;
-				"MACOSX_DEPLOYMENT_TARGET[arch=arm64]" = 11.0;
-				"MACOSX_DEPLOYMENT_TARGET[arch=arm64e]" = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_CFLAGS = "";
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
@@ -3658,6 +3666,7 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALL_PATH = "\"$(USER_LIBRARY_DIR)/Application Support/OpenEmu/Cores\"";
@@ -3671,6 +3680,7 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INSTALL_PATH = "\"$(USER_LIBRARY_DIR)/Application Support/OpenEmu/Cores\"";
 				PRODUCT_NAME = Purei;
@@ -3685,6 +3695,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DYLIB_COMPATIBILITY_VERSION = "";
 				DYLIB_CURRENT_VERSION = "";
@@ -3710,6 +3721,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DYLIB_COMPATIBILITY_VERSION = "";
 				DYLIB_CURRENT_VERSION = "";
@@ -3734,6 +3746,7 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DYLIB_COMPATIBILITY_VERSION = "";
 				DYLIB_CURRENT_VERSION = "";
@@ -3754,6 +3767,7 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DYLIB_COMPATIBILITY_VERSION = "";
 				DYLIB_CURRENT_VERSION = "";
@@ -3782,6 +3796,7 @@
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -3816,6 +3831,7 @@
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				EXECUTABLE_PREFIX = lib;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -3849,6 +3865,7 @@
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -3878,6 +3895,7 @@
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				EXECUTABLE_PREFIX = lib;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -3906,6 +3924,7 @@
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -3940,6 +3959,7 @@
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				EXECUTABLE_PREFIX = lib;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -3962,6 +3982,7 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DYLIB_COMPATIBILITY_VERSION = "";
 				DYLIB_CURRENT_VERSION = "";
@@ -3981,6 +4002,7 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DYLIB_COMPATIBILITY_VERSION = "";
 				DYLIB_CURRENT_VERSION = "";
